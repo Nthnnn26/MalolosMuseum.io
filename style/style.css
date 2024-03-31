@@ -33,7 +33,7 @@ p {
                                                     /* INDEX */
 
 .landing-page {
-    background: url('../assets/bg_index.png');
+    background: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -46,7 +46,7 @@ p {
 }
 
 .index-2 {
-    background: url('../assets/bg_index.png');
+    background: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -186,50 +186,17 @@ header {
     border-image: linear-gradient(to right, rgba(97, 62, 10, 0), #CC9900, rgba(97, 62, 10, 0));
     border-image-slice: 1;
 }
-.container-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    max-height: 100px;  
-  
+
+.gradient-line-left {
+    border-top: 3px solid;
+     border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #FFFFFF 31.02%, #CC9900 33.02%, rgba(204, 153, 0, 0) 100%);
+     border-image-slice: 1;
 }
 
-.btn-glowing {
-    width: 700px;
-    font-size: 1.1em;
-    border: 2px solid #CC9900;
-    border-radius: 50px;
-    color: white;
-    background-color: #613E0A;
-    padding: 10px 15px;
-    overflow: hidden;
-    text-decoration: none;
-    box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
-    -webkit-box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
-    -moz-box-shadow: 20px 0px 50px 10px rgba(97, 62, 10, 0.7), -20px 0px 50px 10px rgba(97, 62, 10, 0.7);
-}
-.btn-glowing:hover {
-    transform: scale(1.1); 
-    transition: transform 0.3s ease;
-}
-.btn-noglow {
-    width: 700px;
-    font-size: 1.1em;
-    border: 2px solid #CC9900;
-    border-radius: 50px;
-    color: white;
-    background-color: #613E0A;
-    padding: 10px 15px;
-    overflow: hidden;
-    text-decoration: none;   
-}
-.btn-noglow:hover {
-    transform: scale(1.1); 
-    transition: transform 0.3s ease;
+.gradient-line-right {
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900  66.98%, #FFFFFF 69.98%, #CC9900  72.49%, rgba(204, 153, 0, 0) 100%);
+    border-image-slice: 1;
 }
 
 .swiper-slide {
@@ -262,8 +229,7 @@ header {
 
 .swiper-wrapper {
     padding: 50px 0px;
-    cursor: grab;
-    
+    cursor: grab;  
 }
 
 .swiper-pagination-gold-bg .swiper-pagination-bullet {
@@ -313,13 +279,47 @@ header {
     padding: 0px 10px;
 }
 
-
-
 .swiper2 .swiper-button-prev::after,
 .swiper2 .swiper-button-next::after {
     content: '';
 }
 
+.swiper-exhibit .swiper-slide {
+    justify-content: start;
+}
+
+.swiper-exhibit .swiper-button-prev,
+.swiper-exhibit .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-exhibit .swiper-button-prev::after,
+.swiper-exhibit .swiper-button-next::after {
+    content: '';
+}
+
+.swiper-exhibit .swiper-button-prev i,
+.swiper-exhibit .swiper-button-next i {
+    color: #000000;
+    font-size: 32px;
+}
+
+.exhibit-box {
+    width: 250px;
+    border: 2px solid #CC9900;
+    padding: 20px;
+}
+
+.exhibit-box img {
+    max-width: 100%;
+    height: auto;
+}
 
 footer {
     background-color: #362406;
@@ -358,6 +358,10 @@ footer {
     .swiper2 .swiper-button-next {
         display: none;
     }
+    .swiper-exhibit .swiper-button-prev,
+    .swiper-exhibit .swiper-button-next {
+        display: none;
+    }
     .swiper2 {
         width: 100%;
         height: auto;
@@ -365,5 +369,14 @@ footer {
     .lg-outer-box img {
         height: 150px;
         width: auto;
+    }
+    .btn-black {
+        font-size: 1em;
+    }
+    .mobile-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
