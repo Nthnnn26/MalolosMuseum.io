@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000); 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".hover-fx");
+    
+    images.forEach(image => {
+        image.addEventListener("click", function() {
+            const sectionId = this.id.replace("image", "section");
+            const section = document.getElementById(sectionId);
+            if (section) {
+                smoothScrollTo(section);
+            }
+        });
+    });
+    
+    function smoothScrollTo(element) {
+        window.scrollTo({
+            behavior: 'smooth',
+            top: element.offsetTop
+        });
+    }
+});
+
 
 
 window.addEventListener('scroll', reveal);
