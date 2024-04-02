@@ -6,6 +6,25 @@ function index2() {
     window.location.href = 'index-2.html';
 }
 
+function barasoainPage() {
+    window.location.href = 'barasoain.html';
+}
+
+function virtualTourPage() {
+    window.location.href = 'virtual-tour.html';
+}
+
+function virtualLink() {
+    window.location.href = 'https://www.youtube.com/watch?v=Eol_Y2iCXNs';
+}
+
+function showVideo() {
+    var imageButton = document.getElementById("image-button");
+    var video = document.getElementById("video");
+    imageButton.style.display = "none";
+    video.classList.remove("d-none");
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(function() {
@@ -53,3 +72,4 @@ function reveal() {
         }
     }
 }
+

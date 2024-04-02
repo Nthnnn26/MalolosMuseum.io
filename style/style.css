@@ -92,6 +92,8 @@ p {
     transform: scale(1.1); 
     transition: transform 0.3s ease;
  }
+
+
  /* INDEX - ANIMATIONS */
  @keyframes bg-fade-in {
     from {
@@ -181,6 +183,19 @@ header {
     border-image-slice: 1;
 }
 
+.linear-border::before {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Adjust to match border width */
+    left: -100%;
+    width: 70px;
+    height: 3px; /* Adjust to match border width */
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, rgba(211, 210, 210, 0.5) 30%,rgba(252, 214, 214, 1) 45%, rgba(245, 219, 219, 0.8) 60%, rgba(204, 153, 0, 0) 100%);
+    border-image-slice: 1;
+    animation: glowingEffect 10s linear infinite alternate;
+}
+
 .top-linear-border {
     border-top: 3px solid;
     border-image: linear-gradient(to right, rgba(97, 62, 10, 0), #CC9900, rgba(97, 62, 10, 0));
@@ -189,14 +204,114 @@ header {
 
 .gradient-line-left {
     border-top: 3px solid;
-    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #FFFFFF 31.02%, #CC9900 33.02%, rgba(204, 153, 0, 0) 100%);
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900  50%, rgba(204, 153, 0, 0) 100%);
     border-image-slice: 1;
+    position: relative;
+}
+
+.gradient-line-left::before {
+    content: "";
+    position: absolute;
+    top: -3px; /* Adjust to match border width */
+    left: -100%;
+    width: 70px;
+    height: 3px; /* Adjust to match border width */
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, rgba(211, 210, 210, 0.5) 30%,rgba(252, 214, 214, 1) 45%, rgba(245, 219, 219, 0.8) 60%, rgba(204, 153, 0, 0) 100%);
+    border-image-slice: 1;
+    animation: glowingEffect 10s linear infinite alternate;
+}
+
+@keyframes glowingEffect {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    20% {
+        left: 20%;
+        opacity: 1;
+    }
+    80% {
+        left: 80%;
+        opacity: 1;
+        scale: (1.1);
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
 }
 
 .gradient-line-right {
     border-top: 3px solid;
-    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900  66.98%, #FFFFFF 69.98%, #CC9900  72.49%, rgba(204, 153, 0, 0) 100%);
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900  50%, rgba(204, 153, 0, 0) 100%);
     border-image-slice: 1;
+    position: relative;
+}
+
+.gradient-line-right::before {
+    content: "";
+    position: absolute;
+    top: -3px; /* Adjust to match border width */
+    right: -100%;
+    width: 70px;
+    height: 3px; /* Adjust to match border width */
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, rgba(211, 210, 210, 0.5) 30%,rgba(252, 214, 214, 1) 45%, rgba(245, 219, 219, 0.8) 60%, rgba(204, 153, 0, 0) 100%);
+    border-image-slice: 1;
+    animation: glowingEffect2 10s linear infinite alternate;
+}
+
+@keyframes glowingEffect2 {
+    0% {
+        right: 0%;
+        opacity: 0;
+    }
+    20% {
+        right: 20%;
+        opacity: 1;
+    }
+    80% {
+        right: 80%;
+        opacity: 1;
+        scale: (1.1);
+    }
+    100% {
+        right: 100%;
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    animation: fade 10s infinite;
+}
+
+.fade-out2 {
+    animation: fade2 10s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    } 50% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 1;
+    } 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
 }
 
 .swiper-slide {
@@ -363,7 +478,7 @@ footer {
     border-top: 2px solid;
     border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #CC9900 47.51%, #CC9900 74.51%, rgba(204, 153, 0, 0) 100%);;
     border-image-slice: 1;
-    background-color: #362406;
+    background-color: transparent;
     margin-top: auto;
     padding: 5px;
 }
@@ -382,6 +497,7 @@ footer {
 .anim-pulse {
     animation: pulse 1s infinite alternate;
 }
+
 
 @keyframes pulse {
     0% { transform: scale(1); }
