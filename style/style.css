@@ -144,12 +144,12 @@ header {
     justify-content: space-between;
 }
 .btn-brown {
-    border: 2px solid #CC9900;
+    border: 1px solid #FFFFFF;
     border-radius: 50px;
     color: white;
     background-color: #613E0A;
-    padding: 10px 15px;
-    font-size: 1.3em;
+    padding: 10px 50px;
+    font-size: 1.1em;
 }
 .btn-brown:hover {
     transform: scale(1.1); 
@@ -483,6 +483,12 @@ footer {
     padding: 5px;
 }
 
+.large-form {
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
 .video-container {
     display: flex;
     justify-content: center;
@@ -498,6 +504,96 @@ footer {
     animation: pulse 1s infinite alternate;
 }
 
+.custom-bg {
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/teampage-bg.png?raw=true');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thinking {
+    width: 288px;
+    height: 289px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/thinking.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 862px;
+    animation: animThinking 1s steps(3) infinite;
+}
+
+@keyframes animThinking {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -862px;
+    }
+}
+
+.waving {
+    width: 223px;
+    height: 223px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/waving.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 1115px;
+    animation: animWaving 1s steps(5) infinite;
+}
+
+@keyframes animWaving {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -1115px;
+    }
+}
+
+.pointing {
+    width: 295px;
+    height: 296px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/pointing.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 1180px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    animation: animPointing 1s steps(4) infinite;
+}
+
+@keyframes animPointing {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -1180px;
+    }
+}
+
+.blinking {
+    width: 295px;
+    height: 296px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/blinking.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 1180px;
+    animation: animBlinking 1s steps(4) infinite;
+}
+
+@keyframes animBlinking {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -1180px;
+    }
+}
+
+.image-container {
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    height: 100%;
+}
+
+.image-container:hover .team-img {
+    transform: rotate(360deg);
+}
+
+.team-img {
+    transition: transform 0.5s ease;
+}
 
 @keyframes pulse {
     0% { transform: scale(1); }

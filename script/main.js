@@ -18,12 +18,48 @@ function virtualLink() {
     window.location.href = 'https://www.youtube.com/watch?v=Eol_Y2iCXNs';
 }
 
+function arrangeVisit() {
+    window.location.href = 'https://nhcp.gov.ph/museums/';
+}
+
+function feedback() {
+    window.location.href = 'feedback.html';
+}
+
 function showVideo() {
     var imageButton = document.getElementById("image-button");
     var video = document.getElementById("video");
     imageButton.style.display = "none";
     video.classList.remove("d-none");
 }
+
+function viewAbout(frontId, backId) {
+    var front = document.getElementById(frontId);
+    var back = document.getElementById(backId);
+    front.style.display = "none";
+    back.style.display = "block";
+}
+
+function backAbout(frontId, backId) {
+    var front = document.getElementById(frontId);
+    var back = document.getElementById(backId);
+    back.style.display = "none";
+    front.style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var images = document.querySelectorAll('.team-img');
+    images.forEach(function(image) {
+        var originalSrc = image.getAttribute('data-original-src');
+        var hoverSrc = image.getAttribute('data-hover-src');
+        image.addEventListener('mouseenter', function() {
+            image.src = hoverSrc;
+        });
+        image.addEventListener('mouseleave', function() {
+            image.src = originalSrc;
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
 
