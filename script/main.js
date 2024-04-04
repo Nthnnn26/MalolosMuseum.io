@@ -33,6 +33,10 @@ function showVideo() {
     video.classList.remove("d-none");
 }
 
+function teamPage() {
+    window.location.href = 'team.html';
+}
+
 function viewAbout(frontId, backId) {
     var front = document.getElementById(frontId);
     var back = document.getElementById(backId);
@@ -45,6 +49,12 @@ function backAbout(frontId, backId) {
     var back = document.getElementById(backId);
     back.style.display = "none";
     front.style.display = "block";
+}
+
+function showPicture(imageSrc) {
+    var modalImage = document.getElementById('highlightedImage');
+    modalImage.src = imageSrc;
+    $('#modalPicture').modal('show');
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -109,3 +119,8 @@ function reveal() {
     }
 }
 
+const download1 = document.getElementById("download1");
+const file1 = "https://drive.google.com/uc?export=download&id=19H8z1aC4-SdTFZJNOTeN4uJw6QfZR3dd"
+download1.addEventListener("click", function() {
+    location.href = file1;
+});

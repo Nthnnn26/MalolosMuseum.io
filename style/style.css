@@ -33,31 +33,134 @@ p {
                                                     /* INDEX */
 
 .landing-page {
+    position: absolute;
     background: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
-    animation: bg-fade-in 15s forwards;
-    opacity: 0.1;
-    transition: opacity 0.3s ease;
+    height: 100%;
+    opacity: 0.3;
+ 
 }
 
+
+
+
+
 .index-2 {
-    background: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    animation: changeBackground 12s infinite alternate ease-in-out;
 }
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
+    }
+    50% {
+        background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index_1.png?raw=true');
+    }
+    100% {
+        background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index_2.png?raw=true');
+    }
+}
+
+
+
 .fade-in {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-    animation: text-white 15s forwards;
+    color: #000000;
 }
+
+/* Animation for each character */
+@keyframes char-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply animation to each character with different delays */
+.fade-in span {
+    display: inline-block;
+    animation: char-fade-in 1s forwards;
+    opacity: 0;
+    font-family: 'Batangas', sans-serif;
+}
+
+/* Offset animation start time for each character */
+.fade-in span:nth-child(1) { 
+    animation-delay: 0s;
+}
+.fade-in span:nth-child(2) { 
+    animation-delay: 0.2s;
+}
+.fade-in span:nth-child(3) { 
+    animation-delay: 0.4s;
+}
+.fade-in span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.fade-in span:nth-child(5) { 
+    animation-delay: 0.6s;
+}
+.fade-in span:nth-child(6) { 
+    animation-delay: 0.8s;
+}
+.fade-in span:nth-child(7) { 
+    animation-delay: 1s;
+}
+.fade-in span:nth-child(8) { 
+    animation-delay: 1.2s;
+}
+.fade-in span:nth-child(9) { 
+    animation-delay: 1.4s;
+}
+.fade-in span:nth-child(10) { 
+    animation-delay: 1.6s;
+}
+.fade-in span:nth-child(11) {
+    animation-delay: 1.8s;
+}
+.fade-in span:nth-child(12) { 
+    animation-delay: 1.8s;
+}
+.fade-in span:nth-child(13) { 
+    animation-delay: 2s;
+}
+.fade-in span:nth-child(14) { 
+    animation-delay: 2.2s;
+}
+.fade-in span:nth-child(15) { 
+    animation-delay: 2.4s;
+}
+.fade-in span:nth-child(16) { 
+    animation-delay: 2.6s;
+}
+.fade-in span:nth-child(17) { 
+    animation-delay: 2.8s;
+}
+.fade-in span:nth-child(18) { 
+    animation-delay: 3s;
+}
+.fade-in span:nth-child(19) { 
+    animation-delay: 3.2s;
+}
+
+
 .index-btn {
     border: 1px solid #FFFFFF;
     border-radius: 50px;
@@ -65,13 +168,12 @@ p {
     padding: 10px 15px;
     font-size: 1.3em;
     background-color: #000000;
-    animation: black-to-brown 15s forwards;
+    animation: black-to-brown 15s linear forwards;
 }
 .museum-box img {
     max-width: 200px;
     margin-right: 30px;
-    animation: image-white 15s forwards;
-    filter: invert(0%);
+ 
 }
 
 .museum-box2 img {
@@ -80,9 +182,24 @@ p {
     filter: invert(100%);
 }
 .side-img {
-    opacity: 1;
-    animation: bg-fade-out 15s forwards;
- }
+    position: absolute;
+    transition: bottom 1s ease-in;
+    animation: riseUp 4s ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+
+
+
+@keyframes riseUp {
+    0% {
+        bottom: -350px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
 
  .hover-fx {
     cursor: pointer;
@@ -94,43 +211,10 @@ p {
  }
 
 
- /* INDEX - ANIMATIONS */
- @keyframes bg-fade-in {
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@keyframes text-white {
-    0% {
-        color: #000000;
-    }
-    100% {
-        color: #FFFFFF;
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    }
-}
-@keyframes black-to-brown {
-    100% {
-        background-color: #362406;
-    }
-}
-@keyframes image-white {
-    100% {
-        filter: invert(100%);
-    }
-}
-@keyframes bg-fade-out {
-    100% {
-        opacity: 0;
-    }
-}
 
-                                                        /* INDEX DESIGN END */
+  /* INDEX DESIGN END */
 
-                                                        /* TOP BAR */
+/* TOP BAR */
 .navbar-nav .nav-link {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -416,7 +500,7 @@ header {
 }
 
 .swiper-video .swiper-wrapper .swiper-slide iframe {
-    padding: 50px 100px;
+    padding: 0px 100px;
 }
 
 .swiper-video .swiper-button-prev,
@@ -481,6 +565,11 @@ footer {
     background-color: transparent;
     margin-top: auto;
     padding: 5px;
+}
+
+.feedback-btn {
+    width: 20%;
+    height: auto;
 }
 
 .large-form {
@@ -601,6 +690,7 @@ footer {
     100% { transform: scale(1); }
 }
 
+
 @media (max-width: 576px) {
     body {
         font-size: 12px;
@@ -614,7 +704,8 @@ footer {
         margin-right: 20px;
     }
     .side-img {
-       display: none;
+       width: 50%;
+       height: auto;
     }
     p {
         font-size: 14px;
@@ -636,6 +727,13 @@ footer {
     .swiper-exhibit .swiper-button-next {
         display: none;
     }
+    .swiper-video .swiper-button-prev,
+    .swiper-video .swiper-button-next {
+        display: none;
+    }
+    .swiper-video .swiper-wrapper .swiper-slide iframe {
+        padding: 0px 0px;
+    }
     .swiper2 {
         width: 100%;
         height: auto;
@@ -652,5 +750,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .feedback-btn {
+        width: 40%;
+        height: auto;
+   
     }
 }

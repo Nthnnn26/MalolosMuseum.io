@@ -50,16 +50,19 @@
                 <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/feedbackbg.png?raw=true" alt="" class="img-fluid linear-border">
                 <h1 class="text-white text-center py-3">We'd like to hear from you!</h1>
                 <div class="d-flex justify-content-around mt-5">
-                    <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-back.png?raw=true" alt="" class="img-fluid hover-fx" style="width: 20%; height: auto;">
-                    <img data-bs-toggle="modal" data-bs-target="#modalForward" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-forward.png?raw=true" alt="" class="img-fluid hover-fx" style="width: 20%; height: auto;">
+                    <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-back.png?raw=true" alt="" class="img-fluid hover-fx feedback-btn" onclick="teamPage()">
+                    <img data-bs-toggle="modal" data-bs-target="#modalForward" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-forward.png?raw=true" alt="" class="img-fluid hover-fx feedback-btn">
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="modalForward" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content text-center align-items-center p-5" style="border-radius: 0px; background-color: #362406; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5);">
-                    <h1 class="text-white py-3">FEEDBACK</h1>
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content text-center align-items-center p-2" style="border-radius: 0px; background-color: #362406; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5);">
+                    <div class="modal-header w-100 d-flex justify-content-between align-items-center" style="border: none;">
+                        <h1 class="text-white flex-grow-1 py-1">FEEDBACK</h1>
+                        <button class="hover-fx bg-transparent" style="border: none;"data-bs-dismiss="modal"><i class="fa fa-times fs-3" aria-hidden="true" style="color: #FFFFFF;"></i></button>              
+                    </div>
                     <div class="container d-flex justify-content-center align-items-center">
                         <form action="" class="large-form">
                             <div class="row">
