@@ -244,8 +244,9 @@ header {
     border-radius: 50px;
     color: white;
     background-color: #000000;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font-size: 1.3em;
+    white-space: nowrap;
 }
 .btn-black:hover {
     transform: scale(1.1); 
@@ -743,7 +744,7 @@ footer {
         width: auto;
     }
     .btn-black {
-        font-size: .8em;
+        font-size: .7em;
     }
     .mobile-center {
         display: flex;
