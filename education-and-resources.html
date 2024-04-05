@@ -103,6 +103,7 @@
                         </div>
                         <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
                         <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+                        <div class="swiper-pagination swiper-pagination-gold-bg"></div> 
                     </div>   
                     <h4 class="text-center text-white" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Courtesy of GMA News and Public Affair Digital</h4>            
                 </div>
@@ -159,15 +160,15 @@
                     <div class="swiper swiper-art px-5">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="row">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
                                         <div class="col-md-4 text-center">
                                             <div style="border: 2px solid #CC9900; padding: 10px;">
                                                 <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/education/1.png?raw=true" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-8 text-center">
-                                            <h5 class="text-white text-start pb-5">Fernando Amorsolo - "Farmer's Pride"</h5>
+                                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                                            <h5 class="text-white text-start">Fernando Amorsolo - "Farmer's Pride"</h5>
                                             <p class="text-white text-start py-5">In Fernando Amorsolo's masterpiece 'Farmer's Pride,' the artist captures the essence 
                                                 of rural life in the Philippines with profound simplicity and dignity. Set against 
                                                 the backdrop of the verdant countryside, the painting portrays a Filipino farmer 
@@ -183,15 +184,15 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="row">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
                                         <div class="col-md-4 text-center">
                                             <div style="border: 2px solid #CC9900; padding: 10px;">
                                                 <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/education/2.png?raw=true" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-8 text-center">
-                                            <h5 class="text-white text-start pb-5">Fernando Amorsolo - "Dalagang Bukid"</h5>
+                                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                                            <h5 class="text-white text-start">Fernando Amorsolo - "Dalagang Bukid"</h5>
                                             <p class="text-white text-start py-5">In 'Dalagang Bukid' or 'The Country Maiden,' Fernando Amorsolo 
                                                 elevates the ordinary into the extraordinary, capturing the timeless beauty and grace of the Filipina 
                                                 woman. Against a backdrop of rustic simplicity, the painting portrays a young woman adorned in traditional 
@@ -205,15 +206,15 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="row">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
                                         <div class="col-md-4 text-center">
                                             <div style="border: 2px solid #CC9900; padding: 10px;">
                                                 <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/education/3.jpg?raw=true" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-8 text-center">
-                                            <h5 class="text-white text-start pb-5">Carlos "Botong" Francisco - "Bayanihan"</h5>
+                                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+                                            <h5 class="text-white text-start">Carlos "Botong" Francisco - "Bayanihan"</h5>
                                             <p class="text-white text-start py-5">In 'Bayanihan,' Carlos 'Botong' Francisco celebrates the collective 
                                                 spirit and resilience of the Filipino people, immortalizing the traditional practice of bayanihan with 
                                                 vibrant energy and dynamism. Set against the backdrop of a rural village, the painting captures the 
@@ -251,6 +252,10 @@
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
                 },
             });
 
