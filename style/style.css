@@ -33,19 +33,28 @@ p {
                                                     /* INDEX */
 
 .landing-page {
-    position: absolute;
     background: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/bg_index.png?raw=true');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    object-fit: cover;
     width: 100%;
-    height: 100%;
-    opacity: 0.3;
- 
+    height: 100vh;
+    opacity: 0.5; 
+    z-index: 10;
 }
 
-
+.landing-page video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
 
 
 
@@ -583,6 +592,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .video-container iframe {

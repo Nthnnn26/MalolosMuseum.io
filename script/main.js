@@ -57,6 +57,10 @@ function showPicture(imageSrc) {
     $('#modalPicture').modal('show');
 }
 
+function quizGame() {
+    window.location.href = 'quiz.html';
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     var images = document.querySelectorAll('.team-img');
     images.forEach(function(image) {
