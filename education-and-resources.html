@@ -150,7 +150,7 @@
     
             <div class="container-fluid d-flex justify-content-center" style="border-bottom: 2px solid; border-image: linear-gradient(270deg, #CC9900 0%, #CC9900 14.02%, #CC9900 27.52%, rgba(204, 153, 0, 0) 100%); border-image-slice: 1;">
                 <div class="container d-flex flex-column justify-content-center align-items-center my-5 reveal">        
-                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-quiz.png?raw=true" alt="" style="width: 300px; height: auto;" onclick="quizGame()">                     
+                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-quiz.png?raw=true" alt="" style="width: 300px; height: auto;" onclick="quizModal()">                     
                 </div>
             </div>
         </section>
@@ -237,6 +237,20 @@
                 </div>                            
             </div>
         </section>
+
+        <div class="modal fade" id="modalQuiz" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg d-flex flex-column justify-content-center align-items-center" role="document">
+                <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 0px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
+                    <h1 class="display-1 pt-5" style="white-space: nowrap;"><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">MA</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;">na</span><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">LO</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;"> - </span><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">LOS</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;">e</span></h1>
+                    <h3 class="mb-5" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold; text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ff0000, 0 0 70px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;">QUIZ CHALLENGE</h3>
+                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-play.png?raw=true" alt="" onclick="quizGame()">
+                    <img class="img-fluid hover-fx mb-5" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-blk-back.png?raw=true" alt="" data-bs-dismiss="modal">
+                    <div style="position: absolute; bottom: 0; left: 0; margin-left: -80px; margin-bottom: -120px;">
+                        <div class="thinking"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="container-fluid" style="background-color: #362406;">
             <footer class="container"> 

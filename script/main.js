@@ -57,6 +57,10 @@ function showPicture(imageSrc) {
     $('#modalPicture').modal('show');
 }
 
+function quizModal() {
+    $('#modalQuiz').modal('show');
+}
+
 function quizGame() {
     window.location.href = 'quiz.html';
 }
@@ -73,13 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
             image.src = originalSrc;
         });
     });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    setTimeout(function() {
-        document.body.style.display = 'block';
-    }, 2000); 
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -122,9 +119,3 @@ function reveal() {
         }
     }
 }
-
-const download1 = document.getElementById("download1");
-const file1 = "https://drive.google.com/uc?export=download&id=19H8z1aC4-SdTFZJNOTeN4uJw6QfZR3dd"
-download1.addEventListener("click", function() {
-    location.href = file1;
-});

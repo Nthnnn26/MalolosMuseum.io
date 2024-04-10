@@ -11,10 +11,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
-        #question-1, #question-2, #question-3, #question-4, #question-5, #question-6, #question-7, #question-8, #question-9, #question-10, 
-        #question-11, #question-12, #question-13, #question-14, #question-15, #question-16, #question-17, #question-18, #question-19, #question-20, 
+        #question-2, #question-3, #question-4, #question-5, #question-6, #question-7, #question-8, #question-9, #question-10, 
+        #question-11, #question-12, #question-13, #question-14, #question-15, #question-17, #question-18, #question-19, #question-20, 
         #question-21, #question-22, #question-23, #question-24, #question-25, #question-26, #question-27, #question-28, #question-29, #question-30, 
-        #question-31, #question-32, #question-33, #question-34, #question-35 {
+        #question-32, #question-33, #question-34, #question-35 {
+            display: none;
+        }
+
+        #quizContainer, #beginner, #intermediate, #advanced {
             display: none;
         }
     </style>
@@ -53,364 +57,503 @@
                     </nav>
                 </div>
             </header> 
-            <div class="container-fluid d-flex justify-content-center align-items-center custom-bg position-relative" style="height: calc(100vh - 71px); overflow: hidden;">
-                <div class="container d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="display-1" style="white-space: nowrap;"><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">MA</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;">na</span><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">LO</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;"> - </span><span style="color: #CC9900; font-family: 'Batangas', sans-serif;">LOS</span><span style="color: #FFFFFF; font-family: 'Batangas', sans-serif;">e</span></h1>
-                    <h1 style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">QUIZ CHALLENGE</h4>
-                </div>
-               
-            </div>
-        </section>
-
-        <section>
-            <div class="container-fluid d-flex justify-content-center align-items-center flex-column custom-bg" style="height: calc(100vh - 71px);">
+            <div class="container-fluid d-flex justify-content-center align-items-center flex-column custom-bg" style="height: calc(100vh - 70px);">
                 <div class="container d-flex justify-content-center align-items-center">
-                   <div class="text-center">
-                        <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/golden%20frame-1_jaz.png?raw=true" alt="" class="img-fluid" style="width: 150px; height: 150px;">
-                   </div>
-                   <div class="text-center">
-                        <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/golden%20frame-1_jane.png?raw=true" alt="" class="img-fluid" style="width: 150px; height: 150px;">
-                   </div>
-                   <div class="text-center">
-                        <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/golden%20frame-1_mark.png?raw=true" alt="" class="img-fluid" style="width: 150px; height: 150px;">
-                    </div>
-                    <div class="text-center">
-                        <img src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/golden%20frame-1_jacob.png?raw=true" alt="" class="img-fluid" style="width: 150px; height: 150px;">
-                   </div>
+                   <h1 class="text-white text-center py-5">CHOOSE YOUR CHARACTER</h1>
                 </div>            
                 <div class="container d-flex justify-content-center align-items-center">
-                    <div class="thinking"></div>
-                    <div class="waving"></div>
-                    <div class="pointing"></div>
-                    <div class="blinking"></div>                 
-                 </div> 
+                    <div class="thinking-small char-quiz" onclick="active(this)"></div>
+                    <div class="waving-small char-quiz" onclick="active(this)"></div>
+                    <div class="pointing-small char-quiz" onclick="active(this)"></div>
+                    <div class="blinking-small char-quiz" onclick="active(this)"></div> 
+                                  
+                </div> 
+                <div class="container py-2">
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-md-4 text-center">
+                        <form action="">
+                            <input type="text" class="form-control" id="nicknameInput" required>
+                            <h3 class="text-white py-1">ENTER YOUR NICKNAME</h3>
+                            <button class="fs-6 hover-fx btn-name">Enter</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>              
             </div>
         </section>
 
-        <section id="beginner">
-            <div class="container-fluid p-0 custom-bg">
-                <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100" style="background: rgba(97, 62, 10, 0.5); position: relative;">
-                    <div class="container d-flex justify-content-end" style="position: absolute; top: 0; left: 50%; transform:  translateX(-50%); width: 100%;">
-                        <a class="me-5 py-3 fs-3" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">HOME</a>
-                        <a class="py-3 fs-3" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">EXIT</a>                   
-                    </div>
+        <section id="difficulty">
+            <div class="container-fluid">
+
+            </div>
+        </section>
+
+        <div id="quizContainer" class="container-fluid p-0 custom-bg">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center px-3 vh-100" style="background: rgba(97, 62, 10, 0.5); position: relative;">
+                <div class="container d-flex justify-content-between" style="position: absolute; top: 0; left: 50%; transform:  translateX(-50%); width: 100%;">
+                    <p class="py-3 text-white fs-3" id="timer">00:00</p>
+                    <a class="py-3 fs-3 hover-fx" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">EXIT</a>                   
+                </div>
+                <section id="beginner">
                     <div id="question-1">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">When was the First Philippine Republic established?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1892</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1896</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1898</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1901</button>
                         </div>
                     </div>
 
                     <div id="question-2">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the first president of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Aguinaldo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Andres Bonifacio</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Jose Rizal</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Antonio Luna</button>
                         </div>
                     </div>
 
                     <div id="question-3">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Where was the declaration of Philippine independence from Spanish rule proclaimed?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Kawit, Cavite</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Malolos, Bulacan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Manila</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Cebu City</button>
                         </div>
                     </div>
 
                     <div id="question-4">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">The First Philippine Republic was established after which event?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Paris</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Battle of Manila Bay</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Cry of Pugad Lawin</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Philippine-American War</button>
                         </div>
                     </div>
 
                     <div id="question-5">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the official language of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">English</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Spanish</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Tagalog</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Visayan</button>
                         </div>
                     </div>
 
                     <div id="question-6">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the name of the constitution of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Malolos Constitution</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Manila Constitution</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Aguinaldo Constitution</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Katipunan Constitution</button>
                         </div>
                     </div>
 
                     <div id="question-7">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who led the Malolos Congress, which drafted the constitution of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Aguinaldo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Apolinario Mabini</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Andres Bonifacio</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Antonio Luna</button>
                         </div>
                     </div>
 
                     <div id="question-8">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">The Malolos Constitution was inspired by the constitution of which country?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">United States</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">France</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Spain</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">United Kingdom</button>
                         </div>
                     </div>
 
                     <div id="question-9">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What year did the Philippine-American War break out, leading to the eventual downfall of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1896</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1898</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1899</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">1900</button>
                         </div>
                     </div>
                     
                     <div id="question-10">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which country colonized the Philippines after the defeat of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">United States</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Spain</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Japan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">United Kingdom</button>
                         </div>
                     </div>
 
                     <div id="question-11">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the leader of the Filipino forces during the Philippine-American War?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Aguinaldo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Antonio Luna</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Andres Bonifacio</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Jose Rizal</button>
                         </div>
                     </div>
 
                     <div id="question-12">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which treaty marked the end of the Spanish-American War and led to the cession of the Philippines to the United States?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Paris</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Versailles</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Tordesillas</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Brest-Litovsk</button>
                         </div>
                     </div>
 
                     <div id="question-13">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the nickname given to the soldiers of the Philippine Republic during the Philippine-American War?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Katipuneros</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Guerrillas</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Insurrectos</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Freedom Fighters</button>
                         </div>
                     </div>
 
                     <div id="question-14">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Where did the Battle of Tirad Pass, a significant engagement during the Philippine-American War, take place?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Luzon</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Visayas</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Mindanao</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Palawan</button>
                         </div>
                     </div>
 
                     <div id="question-15">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who became the President of the Philippines after Emilio Aguinaldo surrendered to the United States?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Manuel L. Quezon</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Sergio Osmeña</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">William McKinley</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Theodore Roosevelt</button>
                         </div>
                     </div>
+                </section>
 
-                </div>
-            </div>
-        </section>
-
-        <section id="intermediate">
-            <div class="container-fluid p-0 custom-bg">
-                <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100" style="background: rgba(97, 62, 10, 0.5); position: relative;">
-                    <div class="container d-flex justify-content-end" style="position: absolute; top: 0; left: 50%; transform:  translateX(-50%); width: 100%;">
-                        <a class="me-5 py-3 fs-3" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">HOME</a>
-                        <a class="py-3 fs-3" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">EXIT</a>                   
-                    </div>
+                <section id="intermediate">
                     <div id="question-16">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the venue of the Malolos Congress?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Manila</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Malolos, Bulacan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Cebu City</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Iloilo City</button>
                         </div>
                     </div>
 
                     <div id="question-17">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which document served as the basis for the drafting of the Malolos Constitution?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Declaration of Independence</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Treaty of Paris</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Biak-na-Bato Constitution</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Pack of Biak-na-Bato</button>
                         </div>
                     </div>
 
                     <div id="question-18">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the first Prime Minister of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Apolinario Mabini</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Pedro Paterno</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Antonio Luna</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Aguinaldo</button>
                         </div>
                     </div>
 
                     <div id="question-19">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the primary mode of transportation during the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Cars</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Trains</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Horses and Carriages</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Bicycles</button>
                         </div>
                     </div>
 
                     <div id="question-20">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which industry played a significant role in the economy of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Agriculture</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Manufacturing</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Mining</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Technology</button>
                         </div>
                     </div>
 
                     <div id="question-21">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What traditional Filipino attire was commonly worn during the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Barong Tagalog</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Kimona</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Terno</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Balintawak</button>
                         </div>
                     </div>
 
                     <div id="question-22">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which battle marked the first major victory of Filipino forces against the Spaniards during the Philippine Revolution?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Battle of Manila Bay</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Battle of Tirad Pass</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Battle of Imus</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Battle of Alapan</button>
                         </div>
                     </div>
 
                     <div id="question-23">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the significance of the Pact of Biak-na-Bato?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">It marked the end of the Philippine Revolution against Spain</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">It established the Malolos Congress</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">It initiated the Philippine-American War</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">It declared the independence of the Philippines from the United States</button>
                         </div>
                     </div>
 
                     <div id="question-24">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the American general who led the capture of Emilio Aguinaldo, effectively ending the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Douglas MacArthur</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">John Pershing</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Arthur MacArthur</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Frederick Funston</button>
                         </div>
                     </div>
                     
                     <div id="question-25">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which event led to the establishment of the Republic of Biak-na-Bato, a precursor to the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Execution of Jose Rizal</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Cry of Balintawak</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Spanish defeat at the Battle of Manila Bay</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Truce between Filipino Revolutionaries and Spanish Authorities</button>
                         </div>
                     </div>
 
                     <div id="question-26">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who authored the "Decalogue," a set of ten commandments outlining the duties and responsibilities of Filipino citizens during the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Andres Bonifacio</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Aguinaldo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Apolinario Mabini</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Marcelo H. del Pilar</button>
                         </div>
                     </div>
 
                     <div id="question-27">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which country was the first to recognize the independence of the First Philippine Republic?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">United States</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Spain</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Japan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Germany</button>
                         </div>
                     </div>
 
                     <div id="question-28">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the name of the revolutionary organization founded by Andres Bonifacio, which played a crucial role in the Philippine Revolution against Spain?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Katipunan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Liga Filipina</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">KKK</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Magdalo</button>
                         </div>
                     </div>
 
                     <div id="question-29">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the Filipino general known for his leadership in the Battle of Tirad Pass, where he made a valiant stand against American forces?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Gregorio del Pilar</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Antonio Luna</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Emilio Jacinto</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Mariano Alvarez</button>
                         </div>
                     </div>
 
                     <div id="question-30">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
                             <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which event led to the capture and exile of Emilio Aguinaldo, effectively ending the armed resistance against American rule in the Philippines?</h1>
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
-                            <img  class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-educ-1.png?raw=true" alt="" style="width: 450px; height: auto;">
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Capture of Malolos</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Capture of Manila</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Capture of Palanan</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Capture of Cebu</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="advanced">
+                    <div id="question-31">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Which renowned Filipino artist is known for his vivid and nostalgic portrayals of rural Filipino life, often featuring landscapes, barrios, and scenes of everyday life during the early 20th century?</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Juan Luna</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Fernando Amorsolo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Felix Resurrection Hidalgo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Damian Domingo</button>
                         </div>
                     </div>
 
+                    <div id="question-32">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the title of Fernando Amorsolo's painting that portrayed a group of women dressed in traditional Filipiniana attire, symbolizing grace, elegance, and the beauty of Filipino culture during the early 20th century?</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Harvesters"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Portrait of Purita"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Dalagang Bukid"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Mga Bata sa Gubat"</button>
+                        </div>
+                    </div>
+
+                    <div id="question-33">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">Who was the Filipino painter known for his "Ladies of Malolos" series, which depicted the bravery and intellect of the women of Malolos who petitioned for the establishment of a night school for women?</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Damian Domingo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Fernando Amorsolo</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Juan Luna</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)"> Carlos "Botong" Francisco</button>
+                        </div>
+                    </div>
+
+                    <div id="question-34">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the title of Fernando Amorsolo's painting that showcased a Filipino farmer standing proudly beside his carabao, symbolizing the importance of agriculture in Filipino society?</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Rice Planters"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Planting Rice"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Afternoon Meal"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Farmer's Pride"</button>
+                        </div>
+                    </div>
+
+                    <div id="question-35">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">What was the title of Fernando Amorsolo's painting that portrayed a rural Filipino woman carrying a bundle of rice stalks on her head, symbolizing the resilience and strength of Filipino women?</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Harvesters"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Under the Mango Tree"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Dalagang Bukid"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Rice Planters"</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalQuiz" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+            <div class="modal-dialog modal-dialog-centered d-flex flex-column justify-content-center align-items-center" role="document">
+                <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
+                    <h1 id="status" class="display-1 pt-3"></h1>
+                    <h1 id="Answer" class="display-5 text-white py-3"></h1>
+                    <button class="hover-fx btn-name" onclick="next()">Next</button>
                 </div>
             </div>
-        </section>
-
-       
+        </div>
         
         <script src="script/main.js"></script>
+        <script>
+            function active(clickedElement) {
+                const allCharQuizElements = document.querySelectorAll('.char-quiz');
+
+                // Remove 'active' class from all elements
+                allCharQuizElements.forEach(function(element) {
+                    element.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked element
+                clickedElement.classList.add('active');
+            }
+
+            const answerKey = [
+            "1898",
+            "Emilio Aguinaldo",
+            "Kawit, Cavite",
+            "Battle of Manila Bay",
+            "Spanish",
+            "Malolos Constitution",
+            "Apolinario Mabini",
+            "France",
+            "1899",
+            "United States",
+            "Emilio Aguinaldo",
+            "Treaty of Paris",
+            "Insurrectos",
+            "Luzon",
+            "Manuel L. Quezon",
+            "Malolos, Bulacan",
+            "Biak-na-Bato Constitution",
+            "Pedro Paterno",
+            "Horses and Carriages",
+            "Agriculture",
+            "Barong Tagalog",
+            "Battle of Imus",
+            "It marked the end of the Philippine Revolution against Spain",
+            "Frederick Funston",
+            "Truce between Filipino Revolutionaries and Spanish Authorities",
+            "Apolinario Mabini",
+            "Germany",
+            "Katipunan",
+            "Gregorio del Pilar",
+            "Capture of Palanan",
+            "Fernando Amorsolo", 
+            "Portrait of Purita",
+            "Carlos Botong Francisco",
+            "The Farmer’s Pride",
+            "Dalagang Bukid"
+            ];
+
+            function checkAnswer(clickedButton) {
+                const questionIndex = parseInt(clickedButton.parentElement.parentElement.id.split("-")[1]) - 1;
+                const selectedAnswer = clickedButton.textContent.trim();
+                const statusElement = document.getElementById('status');
+                const answerElement = document.getElementById('Answer');
+
+                const correctAnswer = answerKey[questionIndex];
+
+                if (selectedAnswer === correctAnswer) {
+                    statusElement.textContent = 'Correct';
+                    statusElement.style.color = '#00CC14';
+                    answerElement.textContent = correctAnswer;
+                } else {
+                    statusElement.textContent = 'Wrong';
+                    statusElement.style.color = '#D20101';
+                    answerElement.textContent = correctAnswer;
+                }
+                $('#modalQuiz').modal('show');
+            }
+
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            // Function to update timer
+            function updateTimer() {
+                const timerElement = document.getElementById('timer');
+                let seconds = 0;
+
+                // Update timer every second
+                setInterval(() => {
+                    timerElement.textContent = formatTime(seconds);
+                    seconds++;
+                }, 1000);
+            }
+
+            // Call the updateTimer function when the page loads
+            window.onload = updateTimer;
+        </script>
     </body>
 </html>

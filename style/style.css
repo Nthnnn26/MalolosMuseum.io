@@ -16,7 +16,6 @@
 }
 body {
     font-size: 16px;
-    /*display: none;*/
 }
 h1 {
     font-size: 2.5em;
@@ -605,7 +604,7 @@ footer {
 }
 
 .custom-bg {
-    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/teampage-bg.png?raw=true');
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/teampage-bg.png?raw=true') !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -628,6 +627,25 @@ footer {
     }
 }
 
+.thinking-small {
+    width: 64.2px;
+    height: 200px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/thinking-small.png?raw=true') !important;
+    background-repeat: no-repeat;
+    background-size: 321px;
+    animation: animThinking-small 1s steps(5) infinite;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+@keyframes animThinking-small {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -321px;
+    }
+}
+
 .waving {
     width: 223px;
     height: 223px;
@@ -642,6 +660,25 @@ footer {
         background-position: 0px;
     } to {
         background-position: -1115px;
+    }
+}
+
+.waving-small {
+    width: 101.6px;
+    height: 200px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/waving-small.png?raw=true') !important;
+    background-repeat: no-repeat;
+    background-size: 508px;
+    animation: animWaving-small 1s steps(5) infinite;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+@keyframes animWaving-small {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -508px;
     }
 }
 
@@ -663,6 +700,26 @@ footer {
     }
 }
 
+.pointing-small {
+    width: 79.4px;
+    height: 200px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/pointing-small.png?raw=true') !important;
+    background-repeat: no-repeat;
+    background-size: 397px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    animation: animPointing-small 1s steps(5) infinite;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+@keyframes animPointing-small {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -397px;
+    }
+}
+
 .blinking {
     width: 295px;
     height: 296px;
@@ -678,6 +735,70 @@ footer {
     } to {
         background-position: -1180px;
     }
+}
+
+.blinking-small {
+    width: 73px;
+    height: 200px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/blinking-small.png?raw=true') !important;
+    background-repeat: no-repeat;
+    background-size: 365px;
+    animation: animBlinking-small 1s steps(5) infinite;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+@keyframes animBlinking-small {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -365px;
+    }
+}
+
+.char-quiz:hover {
+    filter: brightness(100%);
+}
+
+.char-quiz.active {
+    filter: brightness(100%);
+}
+
+.woman-pointing {
+    width: 60%; 
+    height: auto;
+}
+
+.btn-name {
+    border-top: 5px solid #CC9900; 
+    border-bottom: 5px solid #CC9900; 
+    border-left: 3px solid #CC9900; 
+    border-right: 3px solid #CC9900; 
+    border-radius: 15px; 
+    padding: 5px 50px; 
+    color: #FFFFFF; 
+    background-color: #362406; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+}
+
+.quiz-btn {
+    border-top: 5px solid #CC9900; 
+    border-bottom: 5px solid #CC9900; 
+    border-left: 3px solid #CC9900; 
+    border-right: 3px solid #CC9900; 
+    border-radius: 20px; 
+    padding: 5px; 
+    color: #FFFFFF; 
+    background-color: #362406; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .image-container {
@@ -766,5 +887,13 @@ footer {
         width: 40%;
         height: auto;
    
+    }
+    .quiz-btn {
+        max-width: none; 
+        font-size: 0.8rem; 
+    }
+    .woman-pointing {
+        width: 40%; 
+        height: auto;
     }
 }
