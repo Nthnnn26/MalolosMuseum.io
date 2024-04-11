@@ -470,7 +470,7 @@
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Rice Planters"</button>
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Planting Rice"</button>
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"Afternoon Meal"</button>
-                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Farmer's Pride"</button>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Farmers Pride"</button>
                         </div>
                     </div>
 
@@ -646,13 +646,13 @@
             "Fernando Amorsolo", 
             "Portrait of Purita",
             "Carlos Botong Francisco",
-            "The Farmer’s Pride",
+            "The Farmers Pride",
             "Dalagang Bukid"
             ];
 
             function checkAnswer(clickedButton) {
                 const questionIndex = parseInt(clickedButton.parentElement.parentElement.id.split("-")[1]) - 1;
-                const selectedAnswer = clickedButton.textContent.trim();
+                const selectedAnswer = clickedButton.textContent.trim().replace(/"/g, '');
                 const statusElement = document.getElementById('status');
                 const answerElement = document.getElementById('Answer');
 
