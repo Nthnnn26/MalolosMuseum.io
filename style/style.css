@@ -682,6 +682,23 @@ footer {
     }
 }
 
+.waving-big {
+    width: 450px;
+    height: 450px;
+    background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/waving-big.png?raw=true') !important;
+    background-repeat: no-repeat;
+    background-size: 2250px;
+    animation: animWaving-big 1s steps(5) infinite;
+}
+
+@keyframes animWaving-big {
+    from {
+        background-position: 0px;
+    } to {
+        background-position: -2250px;
+    }
+}
+
 .pointing {
     width: 295px;
     height: 296px;
@@ -764,8 +781,8 @@ footer {
     filter: brightness(100%);
 }
 
-.woman-pointing {
-    width: 60%; 
+.quiz-blinking {
+    width: 200px; 
     height: auto;
 }
 
@@ -823,8 +840,9 @@ footer {
 }
 
 .modal-quiz {
-    margin-left: 20px;
-    margin-bottom: -60px;
+    position: absolute; 
+    bottom: 5%; 
+    left: 10%;
 }
 
 .modal-quiz .thinking-small {
@@ -906,7 +924,30 @@ footer {
         height: auto;
     }
     .modal-quiz {
+        bottom: 0; 
+        left: 0;
         margin-left: 0px;
         margin-bottom: -100px;
+    }
+    .waving-big {
+        width: 350px;
+        height: 350px;
+        background-image: url('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/team/waving-big.png?raw=true') !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1750px;
+        animation: animWaving-big 1s steps(5) infinite;
+    }
+    
+    @keyframes animWaving-big {
+        from {
+            background-position: 0px;
+        } to {
+            background-position: -1750px;
+        }
+    }
+    .quiz-blinking {
+        width: 100px; 
+        height: auto;
     }
 }

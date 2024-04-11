@@ -507,7 +507,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalQuiz" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+        <div class="modal fade" id="modalQuiz" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="true">
             <div class="modal-dialog modal-dialog-centered d-flex flex-column justify-content-center align-items-center" role="document">
                 <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
                     <h1 id="status" class="display-1 pt-3"></h1>
@@ -521,7 +521,8 @@
             <div class="modal-dialog modal-lg modal-dialog-centered d-flex flex-column justify-content-center align-items-center" role="document">
                 <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
                     <h1 class="display-1 text-white pt-3">Congratulations!</h1>
-                    <h1 class="display-4 text-white pt-3" id="playerNickName"></h1>
+                    <div class="character"></div>
+                    <h1 class="display-4 text-white" id="playerNickName"></h1>
                     <h1 class="display-5 text-white py-3">YOUR SCORE IS: <span id="quizScore" style="font-weight: bold;"></span>/35</h1>
                     <p id="textMoral" class="text-white fs-3 py-5" style="font-family: 'Roboto',sans-serif;"></p>
                     <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/quiz-again.png?raw=true" alt="" style="max-width: 250px; height: auto;" onclick="restart()">
@@ -533,6 +534,7 @@
         <script>
             function active(clickedElement) {
                 const allCharQuizElements = document.querySelectorAll('.char-quiz');
+                const characterContainer = document.querySelector('.character');
 
                 // Remove 'active' class from all elements
                 allCharQuizElements.forEach(function(element) {
@@ -541,6 +543,9 @@
 
                 // Add 'active' class to the clicked element
                 clickedElement.classList.add('active');
+                characterContainer.innerHTML = ''; // Clear previous content
+                const selectedCharacter = clickedElement.cloneNode(true);
+                characterContainer.appendChild(selectedCharacter);
             }
 
             document.getElementById('nicknameForm').addEventListener('submit', function(event) {
