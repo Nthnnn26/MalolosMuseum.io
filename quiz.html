@@ -18,14 +18,18 @@
             display: none;
         }
 
-        #quizContainer, #beginner, #intermediate, #advanced {
+        #difficulty, #quizContainer, #beginner, #intermediate, #advanced {
+            display: none;
+        }
+
+        #doneBeginner, #doneIntermediate, #doneAdvanced {
             display: none;
         }
     </style>
     </head>
 
     <body>   
-        <section>
+        <section id="profile">
             <header style="background-color: #362406;">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg linear-border">
@@ -57,7 +61,7 @@
                     </nav>
                 </div>
             </header> 
-            <div class="container-fluid d-flex justify-content-center align-items-center flex-column custom-bg" style="height: calc(100vh - 70px);">
+            <div class="container-fluid d-flex justify-content-center align-items-center flex-column custom-bg" style="height: calc(100vh - 60px);">
                 <div class="container d-flex justify-content-center align-items-center">
                    <h1 class="text-white text-center py-5">CHOOSE YOUR CHARACTER</h1>
                 </div>            
@@ -71,10 +75,10 @@
                 <div class="container py-2">
                     <div class="row justify-content-center align-items-center">
                       <div class="col-md-4 text-center">
-                        <form action="">
+                        <form action="" id="nicknameForm">
                             <input type="text" class="form-control" id="nicknameInput" required>
                             <h3 class="text-white py-1">ENTER YOUR NICKNAME</h3>
-                            <button class="fs-6 hover-fx btn-name">Enter</button>
+                            <button type="submit" class="fs-6 hover-fx btn-name">Enter</button>
                         </form>
                       </div>
                     </div>
@@ -83,8 +87,23 @@
         </section>
 
         <section id="difficulty">
-            <div class="container-fluid">
-
+            <div class="container-fluid custom-bg">
+                <div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="text-white display-1 py-2">Hello <span style="font-family: 'Batangas',sans-serif; font-weight: bold; color: #CC9900;" id="playerName"></span>!</h1>
+                    <p class="text-white text-center fs-4" style="max-width: 800px;">
+                        Welcome to 'MAnaLO_LOSe Quiz Challenge!’ This is your chance to journey through time
+                        and explore the rich history of the First Philippine Republic.<br>
+                        No matter your current knowledge level,
+                        this quiz is designed to both challenge and educate you.<br><br>
+                        Remember, every question is a step in your journey.<br> 
+                        <br>
+                        So, are you ready to dive into Philippine history?
+                        You have 40 minutes to finish the quiz...
+                        Let's begin!                    
+                    </p>
+                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/quiz/start-quiz.png?raw=true" alt="" style="max-width: 300px; height: auto;" onclick="difficult('difficulty', 'beginner')">
+                    <p class="text-white fs-3" style="font-weight: bold;">BEGINNER LEVEL</p>
+                </div>
             </div>
         </section>
 
@@ -92,7 +111,7 @@
             <div class="container-fluid d-flex flex-column justify-content-center align-items-center px-3 vh-100" style="background: rgba(97, 62, 10, 0.5); position: relative;">
                 <div class="container d-flex justify-content-between" style="position: absolute; top: 0; left: 50%; transform:  translateX(-50%); width: 100%;">
                     <p class="py-3 text-white fs-3" id="timer">00:00</p>
-                    <a class="py-3 fs-3 hover-fx" href="" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;">EXIT</a>                   
+                    <p class="py-3 fs-3 hover-fx" style="color: #FFFFFF; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: bold;"  data-bs-toggle="modal" data-bs-target="#modalQuit">EXIT</p>                   
                 </div>
                 <section id="beginner">
                     <div id="question-1">
@@ -242,6 +261,14 @@
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Sergio Osmeña</button>
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">William McKinley</button>
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Theodore Roosevelt</button>
+                        </div>
+                    </div>
+
+                    <div id="doneBeginner">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center display-1" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">DONE!</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="difficult('beginner', 'intermediate')">NEXT LEVEL</button>
+                            <h3 class="text-white text-center py-5" style="font-family: 'Roboto',sans-serif; font-weight: bold;"> INTERMEDIATE LEVEL</h3>
                         </div>
                     </div>
                 </section>
@@ -396,6 +423,14 @@
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">Capture of Cebu</button>
                         </div>
                     </div>
+
+                    <div id="doneIntermediate">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center display-1" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">DONE!</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" onclick="difficult('intermediate', 'advanced')">NEXT LEVEL</button>
+                            <h3 class="text-white text-center py-5" style="font-family: 'Roboto',sans-serif; font-weight: bold;">ADVANCED LEVEL</h3>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="advanced">
@@ -448,7 +483,27 @@
                             <button class="fs-4 hover-fx quiz-btn my-2" onclick="checkAnswer(this)">"The Rice Planters"</button>
                         </div>
                     </div>
+
+                    <div id="doneAdvanced">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="pb-3 text-center display-1" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-weight: bold;">DONE!</h1>
+                            <button class="fs-4 hover-fx quiz-btn my-2" data-bs-toggle="modal" data-bs-target="#modalDoneQuiz">FINISH THE QUIZ</button>
+                        </div>
+                    </div>
                 </section>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalQuit" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+            <div class="modal-dialog modal-dialog-centered d-flex flex-column justify-content-center align-items-center" role="document">
+                <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
+                    <h1 class="text-white">Do you want to quit in Quiz?</h1>
+                    <div class="w-100 d-flex justify-content-around pt-5" style="border: none;">
+                        <button class="hover-fx btn-name" onclick="yes()">Yes</button>
+                        <button class="hover-fx btn-name" data-bs-dismiss="modal" style="background: #000000 !important;">No</button>
+                    </div>
+                    
+                </div>
             </div>
         </div>
 
@@ -457,7 +512,19 @@
                 <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
                     <h1 id="status" class="display-1 pt-3"></h1>
                     <h1 id="Answer" class="display-5 text-white py-3"></h1>
-                    <button class="hover-fx btn-name" onclick="next()">Next</button>
+                    <button class="hover-fx btn-name" data-bs-dismiss="modal" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalDoneQuiz" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered d-flex flex-column justify-content-center align-items-center" role="document">
+                <div class="modal-content text-center align-items-center p-3 custom-bg" style="border: none; border-radius: 20px; box-shadow: 0 0 20px 10px rgba(204, 153, 0, 0.5); position: relative; overflow: hidden;">
+                    <h1 class="display-1 text-white pt-3">Congratulations!</h1>
+                    <h1 class="display-4 text-white pt-3" id="playerNickName"></h1>
+                    <h1 class="display-5 text-white py-3">YOUR SCORE IS: <span id="quizScore" style="font-weight: bold;"></span>/35</h1>
+                    <p id="textMoral" class="text-white fs-3 py-5" style="font-family: 'Roboto',sans-serif;"></p>
+                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/quiz-again.png?raw=true" alt="" style="max-width: 250px; height: auto;" onclick="restart()">
                 </div>
             </div>
         </div>
@@ -474,6 +541,70 @@
 
                 // Add 'active' class to the clicked element
                 clickedElement.classList.add('active');
+            }
+
+            document.getElementById('nicknameForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                var nickname = document.getElementById('nicknameInput').value;
+                document.getElementById('playerName').textContent = nickname;
+                document.getElementById('playerNickName').textContent = nickname;
+                document.getElementById('profile').style.display = 'none';
+                document.getElementById('difficulty').style.display = 'block';
+            });
+
+            function difficult(level, diffId) {
+                document.getElementById(level).style.display = 'none';
+                document.getElementById('quizContainer').style.display = 'block';
+                document.getElementById(diffId).style.display = 'block';
+
+                if (!timerStarted) {
+                    updateTimer(true); 
+                    timerStarted = true; 
+                }
+            }
+
+            var question = 1;
+            var score = 0;
+            let timerStarted = false;
+
+            function showQuestion(question) {
+                var currentQuestion = document.getElementById('question-' + (question - 1));
+                var nextQuestion = document.getElementById('question-' + question);
+
+                if (currentQuestion) {
+                    currentQuestion.style.display = 'none';
+                }
+
+                if (nextQuestion) {
+                    if(question === 16) {
+                        document.getElementById('doneBeginner').style.display = 'block';
+                    } else if (question === 31) {
+                        document.getElementById('doneIntermediate').style.display = 'block';                   
+                    } else {
+                        nextQuestion.style.display = 'block';
+                    }
+                    
+                } else {
+                    document.getElementById('quizScore').textContent = score;
+                    var textMoralElement = document.getElementById('textMoral');
+                    if (score >= 0 && score <= 7) {
+                        textMoralElement.textContent = "You're just beginning your journey through the rich history of the First Philippine Republic. Don't be discouraged, there's so much more to learn and explore. Keep going!";
+                    } else if (score >= 8 && score <= 14) {
+                        textMoralElement.textContent = "You've taken your first steps into understanding the First Philippine Republic. There's more to uncover, so keep up the momentum!";
+                    } else if (score >= 15 && score <= 21) {
+                        textMoralElement.textContent = "Good job! You're making progress on your journey through the history of the First Philippine Republic. Keep learning and improving!";
+                    } else if (score >= 22 && score <= 28) {
+                        textMoralElement.textContent = "Impressive! Your knowledge about the First Philippine Republic is expanding. Continue on this path and you'll be an expert in no time!";
+                    } else if (score >= 29 && score <= 35) {
+                        textMoralElement.textContent = "BRILLIANT! Your understanding of the First Philippine Republic is commendable. Your journey through the history of MALOLOS REPUBLIC has been fruitful. Keep up the excellent work!";
+                    }
+                    document.getElementById('doneAdvanced').style.display = 'block';
+                }
+            }
+
+            function nextQuestion() {
+                question++;
+                showQuestion(question);
             }
 
             const answerKey = [
@@ -526,6 +657,7 @@
                     statusElement.textContent = 'Correct';
                     statusElement.style.color = '#00CC14';
                     answerElement.textContent = correctAnswer;
+                    score++;
                 } else {
                     statusElement.textContent = 'Wrong';
                     statusElement.style.color = '#D20101';
@@ -552,8 +684,13 @@
                 }, 1000);
             }
 
-            // Call the updateTimer function when the page loads
-            window.onload = updateTimer;
+            function yes() {
+                window.location.href = 'education-and-resources.html';
+            }
+
+            function restart() {
+                location.reload(); 
+            }
         </script>
     </body>
 </html>

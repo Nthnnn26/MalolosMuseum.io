@@ -783,10 +783,10 @@ footer {
 }
 
 .quiz-btn {
-    border-top: 5px solid #CC9900; 
-    border-bottom: 5px solid #CC9900; 
-    border-left: 3px solid #CC9900; 
-    border-right: 3px solid #CC9900; 
+    border-top: 4px solid #CC9900; 
+    border-bottom: 4px solid #CC9900; 
+    border-left: 2px solid #CC9900; 
+    border-right: 2px solid #CC9900; 
     border-radius: 20px; 
     padding: 5px; 
     color: #FFFFFF; 
@@ -820,6 +820,15 @@ footer {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+.modal-quiz {
+    margin-left: 20px;
+    margin-bottom: -60px;
+}
+
+.modal-quiz .thinking-small {
+    filter: brightness(100%);
 }
 
 
@@ -895,5 +904,9 @@ footer {
     .woman-pointing {
         width: 40%; 
         height: auto;
+    }
+    .modal-quiz {
+        margin-left: 0px;
+        margin-bottom: -100px;
     }
 }
