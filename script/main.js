@@ -19,7 +19,10 @@ function virtualLink() {
 }
 
 function arrangeVisit() {
-    window.location.href = 'https://nhcp.gov.ph/museums/';
+    var front = document.getElementById("front");
+    var back = document.getElementById("back");
+    front.style.display = 'none';
+    back.style.display = 'block';
 }
 
 function feedback() {
@@ -51,8 +54,12 @@ function backAbout(frontId, backId) {
     front.style.display = "block";
 }
 
-function showPicture(imageSrc) {
+function showPicture(imageSrc, titleId, descriptionId) {
     var modalImage = document.getElementById('highlightedImage');
+    var title = document.getElementById('title');
+    var description = document.getElementById('description');
+    title.textContent = titleId;
+    description.innerHTML = descriptionId;
     modalImage.src = imageSrc;
     $('#modalPicture').modal('show');
 }

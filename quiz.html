@@ -33,7 +33,7 @@
             <header style="background-color: #362406;">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg linear-border">
-                        <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">Malolos Museum</a>
+                        <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">Museum Website</a>
                         <button class="navbar-toggler border-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#FFFFFF" class="bi bi-list" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -89,19 +89,19 @@
         <section id="difficulty">
             <div class="container-fluid custom-bg">
                 <div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="text-white display-1 py-2">Hello <span style="font-family: 'Batangas',sans-serif; font-weight: bold; color: #CC9900;" id="playerName"></span>!</h1>
+                    <h1 class="text-white display-1 py-2">Hi, <span style="font-family: 'Batangas',sans-serif; font-weight: bold; color: #CC9900;" id="playerName"></span>!</h1>
                     <p class="text-white text-center fs-4" style="max-width: 800px;">
                         Welcome to 'MAnaLO_LOSe Quiz Challenge!’ This is your chance to journey through time
-                        and explore the rich history of the First Philippine Republic.<br>
+                        and explore the rich history of the First Philippine Republic.
                         No matter your current knowledge level,
-                        this quiz is designed to both challenge and educate you.<br><br>
-                        Remember, every question is a step in your journey.<br> 
-                        <br>
-                        So, are you ready to dive into Philippine history?
-                        You have 40 minutes to finish the quiz...
-                        Let's begin!                    
+                        this quiz is designed to both challenge and educate you.
+                        Remember, every question is a step in your journey.<br><br> 
+
+                        So, are you ready to dive into Philippine history?<br>
+                        You have 5 minutes to finish the quiz...
+                        Let's begin!                
                     </p>
-                    <img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/quiz/start-quiz.png?raw=true" alt="" style="max-width: 300px; height: auto;" onclick="difficult('difficulty', 'beginner')">
+                    <img class="img-fluid hover-fx py-3" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/quiz/start-quiz.png?raw=true" alt="" style="max-width: 300px; height: auto;" onclick="difficult('difficulty', 'beginner')">
                     <p class="text-white fs-3" style="font-weight: bold;">BEGINNER LEVEL</p>
                 </div>
             </div>
@@ -560,12 +560,8 @@
             function difficult(level, diffId) {
                 document.getElementById(level).style.display = 'none';
                 document.getElementById('quizContainer').style.display = 'block';
-                document.getElementById(diffId).style.display = 'block';
-
-                if (!timerStarted) {
-                    updateTimer(true); 
-                    timerStarted = true; 
-                }
+                document.getElementById(diffId).style.display = 'block';    
+                resetTimer();
             }
 
             var question = 1;
@@ -581,10 +577,13 @@
                 }
 
                 if (nextQuestion) {
+                    updateTimer();
                     if(question === 16) {
                         document.getElementById('doneBeginner').style.display = 'block';
+                        stopTimer();
                     } else if (question === 31) {
-                        document.getElementById('doneIntermediate').style.display = 'block';                   
+                        document.getElementById('doneIntermediate').style.display = 'block';    
+                        stopTimer();               
                     } else {
                         nextQuestion.style.display = 'block';
                     }
@@ -609,6 +608,7 @@
 
             function nextQuestion() {
                 question++;
+                currentQuestionIndex = question - 1;
                 showQuestion(question);
             }
 
@@ -669,6 +669,7 @@
                     answerElement.textContent = correctAnswer;
                 }
                 $('#modalQuiz').modal('show');
+                stopTimer();
             }
 
             function formatTime(seconds) {
@@ -677,16 +678,47 @@
                 return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
             }
 
+            let currentQuestionIndex = 0;
+            let timerInterval;
             // Function to update timer
             function updateTimer() {
                 const timerElement = document.getElementById('timer');
                 let seconds = 0;
 
-                // Update timer every second
-                setInterval(() => {
+                // Start timer
+                timerInterval = setInterval(() => {
                     timerElement.textContent = formatTime(seconds);
                     seconds++;
+
+                    // Check if 5 seconds have elapsed
+                    if (seconds === 6) {
+                        const selectedAnswer = document.querySelector('.quiz-btn.active');
+                        if (!selectedAnswer) {
+                            // No answer selected, display correct answer modal
+                            displayCorrectAnswer();
+                        }
+                    }
                 }, 1000);
+            }
+
+            function stopTimer() {
+                clearInterval(timerInterval);
+            }
+
+            function displayCorrectAnswer() {
+                const correctAnswer = answerKey[currentQuestionIndex];
+                const statusElement = document.getElementById('status');
+                const answerElement = document.getElementById('Answer');
+
+                statusElement.textContent = 'Time Up';
+                statusElement.style.color = '#D20101';
+                answerElement.textContent = correctAnswer;
+                $('#modalQuiz').modal('show');
+                
+                stopTimer();
+            }
+            function resetTimer() {
+                updateTimer();
             }
 
             function yes() {

@@ -10,13 +10,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #back {
+            display: none;
+        }
+    </style>
     </head>
 
     <body>   
         <header style="background-color: #362406;">
             <div class="container">
                 <nav class="navbar navbar-expand-lg linear-border">
-                    <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">Malolos Museum</a>
+                    <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">Museum Website</a>
                     <button class="navbar-toggler border-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#FFFFFF" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -45,16 +50,32 @@
             </div>
         </header> 
 
-        <div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg-black">
-            <div class="container d-flex flex-column justify-content-center align-items-center">
-                <h1 class="text-white text-center">"MUSULEO NG REPUBLIKA NG 1899"</h1>
-                <button class="btn-brown btn-block btn-lg m-3" onclick="arrangeVisit()">ARRANGE A VISIT!</button>
-                <div class="main-box mt-2" style="padding: 20px; border: 2px solid #CC9900; border-radius: 20px; position: relative;">
-                    <img class="img-fluid fade-out2" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/church.png?raw=true" alt="" style="border-radius: 10px;">
-                    <img class="img-fluid fade-out" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/Barasaoain.png?raw=true" alt="" style="border-radius: 10px;">
+            <div class="container-fluid d-flex justify-content-center align-items-center bg-black" style="min-height: 100vh;">
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="text-white text-center pt-5">"MUSULEO NG REPUBLIKA NG 1899"</h1>
+                    <section id="front">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <button class="btn-brown btn-block btn-lg m-3" onclick="arrangeVisit()">ARRANGE A VISIT!</button>
+                            <div class="main-box mt-2" style="padding: 20px; border: 2px solid #CC9900; border-radius: 20px; position: relative;">
+                                <img class="img-fluid fade-out2" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/church.png?raw=true" alt="" style="border-radius: 10px;">
+                                <img class="img-fluid fade-out" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/Barasaoain.png?raw=true" alt="" style="border-radius: 10px;">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="back">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <p class="text-white text-center fs-1 py-5" style="font-family: 'Roboto',sans-serif;">To arrange a visit or book a tour with the Museum of “Musuleo ng Republika ng 1899”, 
+                                we offer convenient options tailored to suit different group sizes. For groups consisting 
+                                of more than 20 individuals, please reach out  directly via email at <span style="color: #CC9900;">mr1899@nhcp.gov.ph</span>. 
+                                Alternatively, you can contact the physical museum by phone at <span style="color: #CC9900;">(044) 794 1674</span> to secure your reservation.
+                                If you're planning a visit with a smaller group of less than 20 people, there's no need 
+                                for advance booking. You're welcome to simply walk in during the operating hours.
+                            </p>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </div>
 
         <script src="script/main.js"></script>
     </body>
