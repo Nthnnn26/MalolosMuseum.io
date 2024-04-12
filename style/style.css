@@ -360,8 +360,8 @@ header {
 }
 
 .header-logo {
-    height: 40%; 
-    width: auto;
+    width: 80%;
+    height: auto; 
 }
 
 .gradient-line-right-bottom {
