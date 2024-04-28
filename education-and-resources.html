@@ -68,13 +68,13 @@
             <div class="container-fluid d-flex justify-content-center gradient-line-right bg-black">
                 <div class="container d-flex flex-column justify-content-center align-items-center mt-5 reveal">
                     <h3 class="text-center text-white" style="font-family: 'Roboto', sans-serif;">The First Philippine Republic</h1>              
-                    <a href="https://drive.google.com/uc?export=download&id=19H8z1aC4-SdTFZJNOTeN4uJw6QfZR3dd"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1T1A6bfWp_uuTIZyhjQMXrBbDZyyC7e6H" download><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
                     <h3 class="text-center text-white mt-5" style="font-family: 'Roboto', sans-serif;">The Malolos Constitution</h1>              
-                    <a href="https://drive.google.com/uc?export=download&id=1OeTLbp1d9qOtTn_0yChqBIFwe71dl4io"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1ICgfQx-HWSNcS7f7BJ13u2Hsz05P-qKm"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
                     <h3 class="text-center text-white mt-5" style="font-family: 'Roboto', sans-serif;">Leaders of the First Philippine Republic</h1>              
-                    <a href="https://drive.google.com/uc?export=download&id=1WR2lrOGhFPDK1PnMZvhjTmyvZbdT1jqp"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1ZgDuB4MmSicFF_6k5Iax5o0n1Z8WQGqv"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
                     <h3 class="text-center text-white mt-5" style="font-family: 'Roboto', sans-serif;">Everyday Life and Cultures</h1>              
-                    <a href="https://drive.google.com/uc?export=download&id=19TMc6yHvT_kVfuxGzEf0EhGs173jD65d"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1rWv8cVjL0JTbARgEEv3E8RCzVTPr7Ehc"><img class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-download.png?raw=true" alt="" style="width: 300px; height: auto;"></a>
                 </div>
             </div>
         </section>
@@ -155,10 +155,10 @@
             </div>
         </section>
 
-        <section>
+        <section id="section5">
             <div class="container-fluid d-flex flex-column justify-content-center mt-5 bg-black">
-                <div class="container">
-                    <h1 class="text-white text-center">ARTWORK REVIEW</h1>
+                <h1 class="text-white text-center">ARTWORK REVIEW</h1>
+                <div class="container d-flex justify-content-center align-items-center" style="position: relative; padding-left: 30px; padding-right: 30px;">
                     <div class="swiper swiper-art px-5">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -231,9 +231,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination swiper-pagination-white-bg"></div> 
-                        
+                        <div class="swiper-pagination swiper-pagination-white-bg"></div>                        
                     </div>
+                    <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                    <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
                 </div>                            
             </div>
         </section>
@@ -257,7 +258,7 @@
         
         <div class="container-fluid" style="background-color: #362406;">
             <footer class="container"> 
-                <p class="text-center text-white pt-3 fs-6">© Alright Reserved 2024</p>
+                <p class="text-center text-white pt-3">© All Rights Reserved 2024</p>
             </footer>
         </div>
 
@@ -285,6 +286,10 @@
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
             });
 

@@ -73,7 +73,7 @@
                         <button class="btn-black mb-3" onclick="barasoainPage()">BARASOAIN CHURCH HISTORICAL LANDMARK</button>
                         <button class="btn-black mb-3" onclick="virtualTourPage()">HISTORICAL MUSEUM</button>
                         <p class="text-end text-white fs-5">By digitizing artifacts, documents, and social media content, our
-                            website not only contributeto the preservation of cultural
+                            website not only contribute to the preservation of cultural
                             heritage but also provides an interactive learning experience.
                             The significance of this initiative lies in its ability to bridge
                             georaphical gaps, fostering community engagement, and
@@ -87,7 +87,7 @@
         </div>
 
         <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" style="background-color: #000000;">
-            <div class="container d-flex justify-content-center align-items-center row reveal">
+            <div class="container d-flex justify-content-center align-items-center row reveal" style="position: relative; padding-left: 30px; padding-right: 30px;">
                 <h1 class="text-center text-white">MUSEUM COLLECTIONS</h1>
                 <div class="swiper swiper1">
                     <div class="swiper-wrapper">
@@ -204,12 +204,13 @@
                     </div>  
                     <div class="swiper-pagination swiper-pagination-gold-bg"></div>                  
                 </div> 
-                             
+                <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
             </div>
         </div>
 
         <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
-            <div class="container d-flex justify-content-center align-items-center row reveal">
+            <div class="container d-flex justify-content-center align-items-center row reveal" style="position: relative; padding-left: 30px; padding-right: 30px;">
                 <h1 class="text-center text-white">THE MOST POPULAR PAINTINGS & PHOTOGRAPHS</h1>
                 <div class="swiper swiper1">
                     <div class="swiper-wrapper">
@@ -321,6 +322,8 @@
                     </div> 
                     <div class="swiper-pagination swiper-pagination-white-bg"></div>                  
                 </div> 
+                <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
             </div>
         </div>
 
@@ -595,7 +598,7 @@
 
         <div class="container-fluid" style="background-color: #362406;">
             <footer class="container"> 
-                <p class="text-center text-white pt-3 fs-6">© Alright Reserved 2024</p>
+                <p class="text-center text-white pt-3">© All Rights Reserved 2024</p>
             </footer>
         </div>
 
@@ -603,10 +606,17 @@
         <script src="script/main.js"></script>
         <script>
             const swiper1 = new Swiper('.swiper1', {
-                spaceBetween: 30,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
                 loop: true,
                 effect: 'coverflow', 
  
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
