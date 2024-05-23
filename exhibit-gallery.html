@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Malolos Museum</title>
+        <!---CSS LINK--->
+        <link rel="stylesheet" href="style/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .swiper {
+            width: 90%;
+        }
+        @media (max-width: 576px) {
+            .exhibit-box {
+                width: 200px;
+            }
+        }
+    </style>
+    </head>
+
+    <body>   
+        <header style="background-color: #362406;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg linear-border" style="background-color: #362406;">
+                    <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">Museum Website</a>
+                    <button class="navbar-toggler border-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#FFFFFF" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+                    <div class="collapse navbar-collapse" id="btn">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="home.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-center" href="#" style="color: #CC9900;">EXHIBIT GALLERIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="timeline.html">INTERACTIVE TIMELINE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="education-and-resources.html">EDUCATION & RESOURCES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="team.html">TEAM MEMBERS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>      
+        </header> 
+
+        <div class="container-fluid vh-100 d-flex justify-content-center align-items-center" style="background-color: #000000;">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-center text-white pb-5">EXHIBIT GALLERIES</h1>              
+                <img id="image1" class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-xhibit-1.png?raw=true" alt="" style="width: 450px; height: auto;">       
+                <img id="image2" class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-xhibit-2.png?raw=true" alt="" style="width: 450px; height: auto;">        
+                <img id="image3" class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-xhibit-3.png?raw=true" alt="" style="width: 450px; height: auto;">        
+                <img id="image4" class="img-fluid hover-fx" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/btn-xhibit-4.png?raw=true" alt="" style="width: 450px; height: auto;">                       
+            </div>
+        </div>
+
+        <section id="section1">
+            <div class="container-fluid p-0 m-0 d-flex justify-content-center align-items-center bg-black gradient-line-left">
+                <div class="container d-flex justify-content-center align-items-center p-0 m-0">
+                    <div class="swiper swiper-exhibit p-0 m-0 reveal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class="col-md-3">  
+                                        <div class="mobile-center">
+                                            <p class="text-white text-start">EXHIBIT 01</p>
+                                            <div class="exhibit-box">
+                                                <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/1.1.png?raw=true" alt="">
+                                            </div> 
+                                        </div>                                                                                                                       
+                                    </div>
+                                    <div class="col-md-5 ps-4">
+                                        <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Malolos Constitution</h1>
+                                        <p class="text-white py-2 text-left-center">Assertion of Philippine Sovereignty</p>
+                                        <p class="text-white text-left-center">
+                                            The Malolos Congress, convened on September 15, 1898, marked a pivotal moment in Philippine 
+                                            history. It brought together Filipino leaders from across the archipelago to deliberate and 
+                                            enact laws for the newly declared Philippine Republic. The adoption of the Malolos 
+                                            Constitution on January 21, 1899, was a bold assertion of Philippine sovereignty and 
+                                            independence from Spanish colonial rule. This constitution laid the foundation for the First 
+                                            Philippine Republic, embodying the aspirations of the Filipino people for self-governance and 
+                                            freedom from foreign domination.
+                                        </p>
+                                    </div>
+                                </div>                
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-start">EXHIBIT 02</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/1.2.png?raw=true" alt="">
+                                                </div> 
+                                            </div>                                                                                                                        
+                                        </div>
+                                        <div class="col-md-5 ps-4">
+                                            <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Malolos Constitution</h1>
+                                            <p class="text-white py-2 text-left-center">Pioneering Democratic Principles</p>
+                                            <p class="text-white text-left-center">
+                                                The Malolos Constitution was a pioneering document that introduced democratic principles 
+                                                of governance to the Philippines. It established a republican form of government with a 
+                                                separation of powers among the executive, legislative, and judicial branches. The constitution 
+                                                enshrined fundamental rights and freedoms, including the right to liberty, equality, and due 
+                                                process of law. By promoting democratic ideals, the Malolos Congress and Constitution set a 
+                                                precedent for future Philippine constitutions and contributed to the development of democratic 
+                                                institutions in the country.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-start">EXHIBIT 03</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/1.3.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5 ps-4">
+                                            <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Malolos Constitution</h1>
+                                            <p class="text-white py-2 text-left-center">Cultural and Historical Significance</p>
+                                            <p class="text-white text-left-center">
+                                                The Malolos Congress and Constitution hold immense cultural and historical significance in the 
+                                                Philippines. They represent symbols of Filipino resilience, unity, and the struggle for independence. 
+                                                The events at Malolos underscore the determination of Filipino leaders to establish a sovereign 
+                                                nation-state and govern themselves according to democratic principles. The Malolos Congress and 
+                                                Constitution are integral parts of Philippine heritage, embodying the spirit of nationalism and 
+                                                patriotism. By learning about these events, visitors to the exhibit gallery gain insights into the 
+                                                rich tapestry of Philippine history and the enduring legacy of Filipino heroes who fought for freedom 
+                                                and self-determination.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                        <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>  
+                    </div> 
+                </div>
+                                         
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="container-fluid p-0 m-0 d-flex justify-content-center align-items-center bg-black gradient-line-right">
+                <div class="container d-flex justify-content-center align-items-center p-0 m-0">
+                    <div class="swiper swiper-exhibit p-0 m-0 reveal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 01</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/2.1.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Leaders of the First Philippine Republic</h1>
+                                            <p class="text-white py-2 text-right-center">Visionary Leadership and Sacrifice</p>
+                                            <p class="text-white text-right-center">
+                                                The leaders of the First Philippine Republic were visionary individual who played crucial roles in the struggle 
+                                                Philippine independence. Emilio Aguinaldo, the first President of the Republic emerged as a symbol of Filipino 
+                                                resistance against Spanish and American colonial rule. His leadership during the Philippine Revolution and the 
+                                                Philippine-American War inspired Filipinos to fight for freedom and self-determination. Other notable leaders 
+                                                such as Apolinario Mabini, known as the "Brains of the Revolution", and Antonio Luna, a brilliant military 
+                                                strategist, made significant contributions to the cause of independence despite facing immense challenges and 
+                                                sacrifices. By learning about these leaders, visitors can insights into their courage, determination, and unwavering 
+                                                commitment to the Filipino nation.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 02</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/2.2.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Leaders of the First Philippine Republic</h1>
+                                            <p class="text-white py-2 text-right-center">Apolinario Mabini: Diverse Backgrounds and Contributions</p>
+                                            <p class="text-white text-right-center">
+                                                The leaders of the First Republic came from diverse backgrounds and made invaluable contributions to 
+                                                Philippine history. They represented various sectors of society. Including intellectuals, military leaders, 
+                                                and revolutionary figures Apolinario Mabini, a respected scholar and statesman, provided intellectual 
+                                                leadership and drafted key documents such as the Malolos Constitution. Antonio Luna, a skilled military 
+                                                tactician, led Filipino forces in battles against colonial powers and advocated for modernization and reform. 
+                                                These leaders brought their unique skills, perspectives, and strengths to the struggle for independece, 
+                                                leaving a lasting impact on Philippine society.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 03</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/2.3.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Leaders of the First Philippine Republic</h1>
+                                            <p class="text-white py-2 text-right-center">Antonio Luna: Inspiration for Future Generations</p>
+                                            <p class="text-white text-right-center">
+                                                The legacy of the leaders of the First Philippine Republic continues to inspire future 
+                                                generations of Filipinos. Their courage, resilience, and dedication to the ideals of freedom and 
+                                                nationhood serve as guiding principles for Filipinos today. By commemorating their contribution and 
+                                                sacrifices, we honor their memory and reaffirm out commitment to upholding the values of democracy, unity, 
+                                                and patriotism.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                        <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>  
+                    </div> 
+                </div>
+                                         
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="container-fluid p-0 m-0 d-flex justify-content-center align-items-center bg-black gradient-line-left">
+                <div class="container d-flex justify-content-center align-items-center p-0 m-0">
+                    <div class="swiper swiper-exhibit p-0 m-0 reveal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-start">EXHIBIT 01</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/3.1.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5 ps-4">
+                                            <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Battles and Triumphs</h1>
+                                            <p class="text-white py-2 text-left-center">Courage and Resilience in Battle</p>
+                                            <p class="text-white text-left-center">
+                                                The Battles and Triumphs of the FIrst Philippine Republic highlight the courage and resilience of 
+                                                Filipino soldiers in the face of overwhelming odds. From the Battle of Tirad Pass, where a small 
+                                                Filipino force led by General Gregorio del Pilar bravely defended against American troops, to the Siege 
+                                                of Baler, where Filipino insurgents held out against Spanish forces for nearly a year, these battles 
+                                                exemplify the indomitable spirit of the Filipino people in their fight for freedom and independence. 
+                                                Through exhibits and historical artifacts, visitors can gain a deeper understanding of the sacrifices 
+                                                made by Filipino soldiers and their enduring legacy in Philippine history.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-start">EXHIBIT 02</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/3.2.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5 ps-4">
+                                            <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Battles and Triumphs</h1>
+                                            <p class="text-white py-2 text-left-center">Strategic Victories and Tactial Brilliance</p>
+                                            <p class="text-white text-left-center">
+                                                The Battles and Triumphs of the First Philippine Republic also showcase the strategic 
+                                                victories and tactical brilliance of Filipino military leaders. From the successful capture 
+                                                of Spanish garrisons in Cavite during the early stages of the revolution to the guerrilla 
+                                                warfare tactics employed by Filipino insurgents against American forces during the 
+                                                Philippine-American War, these battles demonstrate the ingenuity and adaptability of Filipino 
+                                                commanders in challenging colonial powers. By highlighting these triumphs, the exhibit gallery honors 
+                                                the strategic acumen of Filipino leaders and their contributions to Philippine military history.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-start">EXHIBIT 03</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/3.3.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5 ps-4">
+                                            <h1 class="text-white pt-5 pb-3 text-left-center" style="border-bottom: 3px solid; border-image: linear-gradient(to right, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Battles and Triumphs</h1>
+                                            <p class="text-white py-2 text-left-center">Inspiration for National Identity and Unity</p>
+                                            <p class="text-white text-left-center">
+                                                The Battles and Triumphs of the First Philippine Republic serve as sources of inspiration for 
+                                                national identity and unity. These historical events symbolize the collective struggle of the 
+                                                Filipino people against foreign oppression and tyranny. Whether commemorating the bravery of 
+                                                Filipino soldiers in battle or celebrating the resilience of Filipino communities in times of 
+                                                adversity, these triumphs reinforce the values of patriotism, solidarity, and determination. 
+                                                Through interactive exhibits and multimedia presentations, visitors are encouraged to reflect on 
+                                                the significance of these battles in shaping the Filipino nation and to draw inspiration from the 
+                                                courage and sacrifices of past generations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                        <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>  
+                    </div> 
+                </div>
+                                         
+            </div>
+        </section>
+
+        <section id="section4">
+            <div class="container-fluid p-0 m-0 d-flex justify-content-center align-items-center bg-black gradient-line-right">
+                <div class="container d-flex justify-content-center align-items-center p-0 m-0">
+                    <div class="swiper swiper-exhibit p-0 m-0 reveal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 01</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/4.1.jpg?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Cultural Renaissance</h1>
+                                            <p class="text-white py-2 text-right-center">Cultural Identity and Heritage Preservation</p>
+                                            <p class="text-white text-right-center">
+                                                The Cultural Renaissance of the First Philippine Republic witnessed a flourishing of literary and 
+                                                artistic creativity, with Filipino writers and artists producing works that reflected the spirit of 
+                                                the times. Writers such as Jose Rizal, Marcelo del Pilar, and Graciano Lopez Jaena penned influential 
+                                                essays and literary masterpieces that challenged colonial hegemony and championed Filipino nationalism. 
+                                                Similarly, artists like Juan Luna and Felix Resurreccion Hidalgo gained international acclaim for their 
+                                                paintings, which depicted scenes from Philippine history and daily life.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 02</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/4.2.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Cultural Renaissance</h1>
+                                            <p class="text-white py-2 text-right-center">Literary and Artistic Contributions</p>
+                                            <p class="text-white text-right-center">
+                                                The Cultural Renaissance of the First Philippine Republic witnessed a flourishing 
+                                                of literary and artistic creativity, with Filipino writers and artists producing works that 
+                                                reflected the spirit of the times. Writers such as Jose Rizal, Marcelo del Pilar, and Graciano 
+                                                Lopez Jaena penned influential essays and literary masterpieces that challenged colonial hegemony 
+                                                and championed Filipino nationalism. Similarly, artists like Juan Luna and Felix Resurreccion 
+                                                Hidalgo gained international acclaim for their paintings, which depicted scenes from Philippine 
+                                                history and daily life.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center align-items-center flex-row-reverse">
+                                        <div class="col-md-3">  
+                                            <div class="mobile-center">
+                                                <p class="text-white text-end">EXHIBIT 03</p>
+                                                <div class="exhibit-box">
+                                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/exhibit-gallery/4.3.png?raw=true" alt="">
+                                                </div> 
+                                            </div>     
+                                                                                                                    
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="text-white pt-5 pb-3 text-right-center" style="border-bottom: 3px solid; border-image: linear-gradient(to left, #613E0A 20%, #000000 50%) 1; border-image-slice: 1;">Cultural Renaissance</h1>
+                                            <p class="text-white py-2 text-right-center">Legacy of Cultural Revival</p>
+                                            <p class="text-white text-right-center">
+                                                The Cultural Renaissance of the First Philippine Republic left a lasting legacy that 
+                                                continues to influence Philippine culture and society today. The period saw the establishment 
+                                                of institutions such as newspapers, literary societies, and art academies that served as platforms 
+                                                for promoting Filipino culture and intellectual discourse. Moreover, the ideas and ideals 
+                                                espoused by Filipino intellectuals and artists during this period laid the groundwork for 
+                                                the development of a national consciousness and a sense of cultural pride among Filipinos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                        <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>  
+                    </div>  
+                </div>
+                                        
+            </div>
+        </section>
+        
+        <div class="container-fluid" style="background-color: #362406;">
+            <footer class="container"> 
+                <p class="text-center text-white pt-3">© All Rights Reserved 2024</p>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script/main.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper-exhibit', {
+                slidesPerView: 1,
+                loop: true,   
+  
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },      
+            });
+        </script>
+    </body>
+</html>

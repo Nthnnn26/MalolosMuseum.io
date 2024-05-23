@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Malolos Museum</title>
+        <!---CSS LINK--->
+        <link rel="stylesheet" href="style/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .res-vh {
+            height: 100vh;
+        }
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 0.5em;
+            }
+            .white-logo {
+                width: 40%;
+                height: auto;
+            }
+            .res-vh {
+                height: 100%;
+            }
+        }
+    </style>
+    </head>
+
+    <body>   
+        <header style="background-color: #362406;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg linear-border">
+                    <a href="#" class="navbar-brand fs-3 ms-3 text-white" style="font-family: 'Batangas', sans-serif;">
+                        <img class="img-fluid header-logo" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/home-header.png?raw=true" alt="">
+                    </a>
+                    <button class="navbar-toggler border-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#FFFFFF" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+                    <div class="collapse navbar-collapse" id="btn">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-center" href="#" style="color: #CC9900;">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="exhibit-gallery.html">EXHIBIT GALLERIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="timeline.html">INTERACTIVE TIMELINE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="education-and-resources.html">EDUCATION & RESOURCES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mr-3 text-white text-center" href="team.html">TEAM MEMBERS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header> 
+
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #000000; ">
+            <div class="container d-flex flex-column justify-content-center align-items-center py-4">
+                <img class="img-fluid white-logo" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/homepage1/logo_home.png?raw=true" alt="">           
+                <h1 class="text-center py-5 text-white gradient-line-right-bottom">EXPERIENCE THE ESSENCE OF THE PHILIPPINE HISTORY OF THE FIRST PHILIPPINE REPUBLIC</h1>                  
+                <p class="text-center text-white px-2 pt-3">The Malolos Journey: Restoring the Philippine History of the First Philippine Republic
+                    interactive museum website is a digital platform dedicated to preserving and pressenting
+                    the history of the First Philipine Republic, with a particular focus on the pivotal
+                    Malolos Congress of 1898. This online museum seek to make historical knowledge
+                    easily accessible and engaging, serving as an educational tool for a global audience.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid pt-5 px-0 m-0 d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container d-flex justify-content-center align-items-center row reveal">
+                <div class="row">
+                    <div class="col-md-6 remove">
+                        <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/barasoain.png?raw=true" alt="">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <h1 class="text-right-center text-white p-2">MUSEUM PROFILE</h1>
+                        <button class="btn-black mb-3" onclick="barasoainPage()">BARASOAIN CHURCH HISTORICAL LANDMARK</button>
+                        <button class="btn-black mb-3" onclick="virtualTourPage()">HISTORICAL MUSEUM</button>
+                        <p class="text-right-center text-white">By digitizing artifacts, documents, and social media content, our
+                            website not only contribute to the preservation of cultural
+                            heritage but also provides an interactive learning experience.
+                            The significance of this initiative lies in its ability to bridge
+                            georaphical gaps, fostering community engagement, and
+                            utilizing modern technology to ensure the continued
+                            appreciation and understanding of historical events that
+                            shaped the First Phillipine Republic.
+                        </p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #000000;">
+            <div class="container-fluid d-flex justify-content-center align-items-center row reveal" style="position: relative; padding-left: 30px; padding-right: 30px;">
+                <h1 class="text-center text-white">MUSEUM COLLECTIONS</h1>
+                <div class="swiper swiper1 px-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/1.png?raw=true','Felipe Gonzáles Calderón Roca','a Filipino lawyer, politician, and intellectual, known as the “Father of the Malolos Constitution“.<br><br>-----------------------------<br><br><span class=&quot;fs-4&quot; style=&quot;color: #CC9900;&quot;>Emilio Aguinaldo y Famy</span><br><br>was a Filipino revolutionary, politician, and a military leader who is officially recognized as the First President of the Philippines.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/1.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/2.png?raw=true',
+                                'LA Republica Filipina','The personification of our First Republic, by Isabelo Tampinco. Late 19th Century marble dust. Tampinco is renowned as the “Juan Luna” of sculpture. The statue symbolizes homeland with freedom and saying coined by Isabelo  Tampingco, late 19th century.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/2.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/3.png?raw=true','“Tilburi Velez Sarfield Museo Lujan”',
+                            'Tílburi (carriage) belonging to Dalmacio Vélez Sarsfield (1800-1875), at the Museum of Transport, Luján. It is a car suspended by leather sopandas, pulled by a single horse. It was acquired in 1860 by Francisco Obarrio to make trips between Tigre and San Isidro. The horse-drawn carriage that brought Aguinaldo to Malolos.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/3.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/4.png?raw=true','Historical newspaper documents during First Philippine Republic',
+                            'The history through the pages of newspapers from the First Philippine Republic era, capturing the spirit of the times with headlines like “The Spirit of War Pervades the Breasts of all Americans”. Explore firsthand accounts and perspectives preserved at the “Musuleo ng Republika ng 1899”')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/4.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/5.png?raw=true','“Remembrance of the First Philippine Republic”',
+                            'One of the highlights of this gallery is the diorama that features the declaration of Philippines independence that took place in Kawit, Cavite in 1898.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/5.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/6.png?raw=true','Historical photographs and documents of the Malolos Congress',
+                            'An association created during Aguinaldo’s term and drafted the first Philippine Republic Constitution in 1899.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/6.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/7.png?raw=true','“Dewey Smashes Spain\'s Fleet”', 'All the Spanish ships were sunk and destroyed; the damage done to Dewey’s Asiatic Squadron negligible. Moreover, the annihilation of the Spanish fleet signalled the end of Spanish rule in the Philippines.<br><br>Place: New York. Publisher: Joseph Pulitzer Date Issued: 1898-05-02')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/7.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image"  onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/9.png?raw=true','“Dewey Bombards Manila and The City Surrenders”','A historical document discussing the aftermath of Dewey\'s bombardment on Manila, a pivotal event leading to the city\'s surrender, as documented in historical records preserved at the \'Musuleo ng Republika ng 1899\'')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/9.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image"  onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/10.png?raw=true','The Foundational Document of the First Philippine Republic, the \'Republica Filipina Constitution Politica.\'','The principles and ideals that shaped the nation\'s governance during this historic period, as preserved within the archives of the \'Musuleo ng Republika ng 1899\'.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/10.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/11.png?raw=true','Provisional Stamps lithographed by the Lithographia del Gomes in Sta. Cruz, Manila.','“Impresos” - Newspaper<br>“Telegraphos” - Telegram (2c Purple)<br>“Correos” - Postal (2c) <br>“Telegraphos” - Telegram (50c Blue)<br>“Recibos” - Receipt stamps (10c)')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/11.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/12.png?raw=true','“10 centimos Recibos Revenue First Philippine Republic 1898”','10 centimos Recibos (receipt) Revenue First Philippine Republic 1898 Warren #W-334 Warren, Arnold H. (December 1967). “Fiscal Stamps of the Philippines: Handbook-Catalogue, 1856 to date”')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/12.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/13.png?raw=true','“El Heraldo de la Revolucion”','This was the official newspaper of the Filipino republic.<br><br>Uncover the voices and narratives that shaped the nation\'s story, preserved within the archives of the \'Musuleo ng Republika ng 1899\'')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/13.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/14.png?raw=true','“Pagtindig ng Republika” that centers on the establishment of the Malolos Congress and the drafting of the Constitution.','It also highlights a light and sound presentation. From left to right standing behind Emilio Aguinaldo (seated); Mariano Trias, Trinidad Pardo de Tavera, Pedro Paterno, Gregorio Araneta, Baldomero Aguinaldo, Benito Legarda, and Pablo Campo.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/14.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/15.png?raw=true','A Historic Gathering of the Malolos Congress in 1899.','The Malolos Congress, an association created during Aguinaldo’s term and drafted the first Philippine Republic Constitution in 1899. It highlights the Malolos Constitution and its proponents. It features a glass display showcasing the names of the proponents of the Malolos Constitution.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/15.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/16.png?raw=true','General Emilio Aguinaldo Carriage','A carriage that transported General Emilio Aguinaldo, a symbol of Philippine independence, during significant moments in history.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/museum-collection/16.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="swiper-pagination swiper-pagination-gold-bg"></div> 
+                    <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
+                    <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>                 
+                </div> 
+                
+            </div>
+        </div>
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container-fluid d-flex justify-content-center align-items-center row reveal" style="position: relative; padding-left: 30px; padding-right: 30px;">
+                <h1 class="text-center text-white">THE MOST POPULAR PAINTINGS & PHOTOGRAPHS</h1>
+                <div class="swiper swiper1 px-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/1.png?raw=true','Fernando Amorsolo’s Painting','The timeless beauty of Fernando Amorsolo\'s renowned masterpiece, \'Farmer\'s Pride.\' Celebrating the dignity and resilience of Filipino farmers, this iconic painting captures the essence of rural life in exquisite detail, a treasure displayed proudly at the \'Musuleo ng Republika ng 1899\'.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/1.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/2.png?raw=true','Juan Luna’s Painting','The painting is rich in symbolism, with a woman\'s face representing grief and a man\'s face symbolizing suffering, separated by a cross.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/2.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/3.png?raw=true','&quot;The Battle of Manila Bay&quot; by Juan Luna.','This famous artwork depicts the historic naval battle between the Spanish and American forces during the Spanish-American War.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/3.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/4.png?raw=true','&quot;The Battle of Manila Bay&quot; by Juan Luna.','It prominently features the Spanish and Filipino soldiers, as well as the imposing presence of American naval ships in the background. This painting is a significant part of the collection at the &quot;Musuleo ng Republika ng 1899,&quot; representing a crucial moment in Philippine history.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/4.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/5.png?raw=true','Civil and Military Officers of the FIlipino Republic','When Aguinaldo left Cavite for Bulacan in 1897, he established the Biak-na-Bato Republic and promulgated its constitution as prepared by Felix Ferrer and Isabelo Artacho.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/5.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/6.png?raw=true','Treaty of Paris 1898','The Treaty of Paris ended the Spanish-American War and was signed on December 10, 1898. It had 17 articles that provided terms for peace such as Spain relinquishing control of Cuba, Puerto Rico, and ceding ownership of Guam and the Philippines to the United States. The treaty was preceded by an August 12, 1898, protocol between the U.S. and Spain to appoint peace commissions to negotiate the terms of the treaty in Paris by October 1st.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/6.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/7.png?raw=true','“The proclamation of General Luna is posted upon the wall near the door. The officers are Generals Otis, McArthur and Hale. Photograph was taken within half hour following evacuation of insurgents.”','PHOTO was taken at Barrio Barasoain, Malolos, March 31, 1899.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/7.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/8.png?raw=true','Ejercito Expedicionario','Oct. 1, 1896: Spanish marines of the “Ejercito Expedicionario” march in Manila')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/8.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/9.png?raw=true','“57 soldiers in Baler”','Ragged, sick, and weak from having nothing to put in their mouths. Although also brave and determined to give even the last drop of blood for their country. This is how the only 57 soldiers present in Baler (200 kilometers from Manila) defended in 1898 the last Spanish territory located in the Philippines a small church in which they waited for almost a year for the arrival of Hispanic reinforcements that never arrived.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/9.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/10.png?raw=true','April 25, 1900: Marinduque','Americans patrol with fixed bayonets. Photo taken in 1900, location not specified.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/10.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/11.png?raw=true','','American soldiers utilized ships to navigate narrow rivers during their pursuit of Filipino forces. These sturdy watercraft were crucial for reaching remote areas and maintaining supply lines during the conflict. Their strategic use of maritime mobility played a significant role in the military operations in the Philippines.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/11.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/12.png?raw=true','','The Americans constructed a communication station on the banks of the Pasig River, enhancing their ability to relay information swiftly and efficiently. This strategic placement allowed for improved coordination and communication during various operations and events. The station served as a vital link in their network, facilitating both military and civilian communications.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/12.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/13.png?raw=true','The American Headquarters in La Loma','Served as a pivotal command center during the American colonization of the Philippines, overseeing military strategies and operations. Its strategic location in La Loma provided a vantage point for monitoring key areas and coordinating military activities throughout the region. The headquarters played a crucial role in the American forces\' administration and control during that historical period.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/13.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/14.png?raw=true','','A Photograph of people from islands in the Caribbean and in the Pacific Ocean; Cuba, Hawaii, Philippines and others: American ammunition wagon crossing a stream on a pontoon bridge, Philippines.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/14.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="outer-box">
+                                <div class="image" onclick="showPicture('https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/15.png?raw=true','Fighting in the streets of Manila Philippines, Feb. 1899','Philippine American War, a curious picture in the streets of Manila. They almost look casual. The man standing with the pistol in hand looks to be a prime target. Probably no way of knowing for sure but the picture looks to be a mocked staged fight. The photographer, P. Fremont Rockett, was an official photographer of the 12th Kansas Regiment US Volunteers.')">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/popular-paintings/15.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="swiper-pagination swiper-pagination-white-bg"></div>          
+                    <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                    <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>        
+                </div> 
+                
+            </div>
+        </div>
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #000000">
+            <div class="container d-flex justify-content-center align-items-center row reveal">
+                <div class="swiper swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/1.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/2.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/3.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/4.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/5.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/6.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/7.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/8.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/9.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/10.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/11.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/12.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/13.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="lg-outer-box">
+                                <div class="image">
+                                    <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/our-visitation/14.png?raw=true" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="swiper-button-prev"><i class="fa fa-caret-left" aria-hidden="true" ></i></div>
+                    <div class="swiper-button-next"><i class="fa fa-caret-right" aria-hidden="true"></i></div>               
+                </div> 
+                <h1 class="text-center text-white">ABOUT OUR VISITATION</h1>
+                <p class="text-center text-white">Visiting Date: 2024, March 05</p>
+                <div class="container top-linear-border">
+                    <p class="text-center text-white py-5">
+                        Barasoain Church in Malolos, Bulacan enshrines in its hallowed halls the aspirations and 
+                        commitment of the Filipino people to become an independent nation and establish a republican 
+                        government at the end of the Philippine Revolution against Spain in 1898. Three significant 
+                        events in Philippine history occurred in the church: the convening of the First Philippine 
+                        Congress on 15 September 1898; the ratification of the Malolos Constitution on 21 January 1899; 
+                        and the inauguration of the First Philippine Republic on 23 January 1899.</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container-fluid p-0 res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container d-flex justify-content-center align-items-center row reveal">
+                <h1 class="text-center text-white mb-3">OUR VISITATION VIDEO</h1>
+                <div class="video-container">
+                    <iframe class="img-fluid" src="https://www.youtube.com/embed/oXfBLfFygG8?si=oTNmibnS5FvYvNn5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #000000">
+            <div class="container d-flex justify-content-center align-items-center row reveal">
+                <h1 class="text-center text-white mb-3">OUR INTERVIEW VIDEO</h1>
+                <div class="video-container">
+                    <iframe class="img-fluid" src="https://www.youtube.com/embed/PtYoHpGzGl0?si=R53HiC6BsVpIvs5v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid res-vh py-5 d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container d-flex justify-content-center align-items-center row reveal">
+                <h1 class="text-center text-white mb-3">OUR REELS VIDEO</h1>
+                <div class="video-container">
+                    <iframe class="img-fluid" src="https://www.youtube.com/embed/ITGJ0NxXC-g?si=SCrPthoTxIF5PyfO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #000000">
+            <div class="container d-flex justify-content-center align-items-center row reveal mb-5">
+                <h1 class="text-center text-white pt-5 reveal">EXHIBITION AND EVENTS</h1>
+                <p class="text-center text-white py-3 reveal">(On Progress...)</p>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="p-4" style="border: 2px solid #CC9900;">
+                            <img class="img-fluid" src="https://github.com/Nthnnn26/MalolosMuseum.io/blob/main/assets/events/1.png?raw=true" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex py-3" style="border-top: 2px solid; border-image: linear-gradient(90deg, #CC9900 0%, #CC9900 14.02%, #CC9900 27.52%, rgba(204, 153, 0, 0) 100%); border-image-slice: 1;">
+                            <div class="d-flex flex-column justify-content-center" style="width: 70%;">
+                                <h5 class="text-white m-0" style="font-family: 'Batangas', sans-serif;">Sample Art Week</h5>
+                                <p class="text-white m-0">Until June 23, 2024</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center" style="width: 30%;">
+                                <i class="fa fa-arrow-right fs-1" aria-hidden="true" style="color: #FFFFFF;"></i>
+                            </div>
+                        </div> 
+                        <div class="d-flex py-3" style="border-top: 2px solid; border-image: linear-gradient(90deg, #CC9900 0%, #CC9900 14.02%, #CC9900 27.52%, rgba(204, 153, 0, 0) 100%); border-image-slice: 1;">
+                            <div class="d-flex flex-column justify-content-center" style="width: 70%;">
+                                <h5 class="text-white m-0" style="font-family: 'Batangas', sans-serif;">Sample Art Grooves</h5>
+                                <p class="text-white m-0">June 10, 2024 to August 24, 2024</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center" style="width: 30%;">
+                                <i class="fa fa-arrow-right fs-1" aria-hidden="true" style="color: #FFFFFF;"></i>
+                            </div>
+                        </div> 
+                        <div class="d-flex py-3" style="border-top: 2px solid; border-image: linear-gradient(90deg, #CC9900 0%, #CC9900 14.02%, #CC9900 27.52%, rgba(204, 153, 0, 0) 100%); border-image-slice: 1;">
+                            <div class="d-flex flex-column justify-content-center" style="width: 70%;">
+                                <h5 class="text-white m-0" style="font-family: 'Batangas', sans-serif;">Sample Exhibition</h5>
+                                <p class="text-white m-0">June 30, 2024 to September 30, 2024</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center" style="width: 30%;">
+                                <i class="fa fa-arrow-right fs-1" aria-hidden="true" style="color: #FFFFFF;"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" style="border-top: 2px solid; border-bottom: 2px solid; border-image: linear-gradient(90deg, #CC9900 0%, #CC9900 14.02%, #CC9900 27.52%, rgba(204, 153, 0, 0) 100%); border-image-slice: 1;">
+                            <div class="d-flex flex-column justify-content-center" style="width: 70%;">
+                                <h5 class="text-white m-0" style="font-family: 'Batangas', sans-serif;">Sample Event</h5>
+                                <p class="text-white m-0">August 01, 2024 to August 30, 2024</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center" style="width: 30%;">
+                                <i class="fa fa-arrow-right fs-1" aria-hidden="true" style="color: #FFFFFF;"></i>
+                            </div>
+                        </div>                                              
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container d-flex justify-content-center align-items-center row " style="border-top: 2px solid;
+            border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #CC9900 47.51%, #CC9900 74.51%, rgba(204, 153, 0, 0) 100%);
+            border-image-slice: 1;">
+                <h1 class="text-center text-white pt-5 reveal">OUR TESTIOMONIALS</h1>
+                <p class="text-center text-white py-3 reveal">(On Progress...)</p>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #000000;">
+            <div class="container d-flex justify-content-center align-items-center row" style="border-top: 2px solid;
+            border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #CC9900 47.51%, #CC9900 74.51%, rgba(204, 153, 0, 0) 100%);
+            border-image-slice: 1;">
+                <p class="text-center text-white py-5 px-3 reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Donec sed laoreet mi. Integer dui ipsum, ornare nec pulvinar eu, ultricies sit amet ipsum. 
+                    Aenean quam ante, laoreet eget suscipit nec, egestas egestas lectus. Etiam consectetur 
+                    finibus ligula sit amet commodo. Praesent scelerisque. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Donec sed laoreet mi.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #613E0A;">
+            <div class="container d-flex justify-content-center align-items-center row" style="border-top: 2px solid;
+            border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #CC9900 47.51%, #CC9900 74.51%, rgba(204, 153, 0, 0) 100%);
+            border-image-slice: 1;">
+                <p class="text-center text-white py-5 px-3 reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Donec sed laoreet mi. Integer dui ipsum, ornare nec pulvinar eu, ultricies sit amet ipsum. 
+                    Aenean quam ante, laoreet eget suscipit nec, egestas egestas lectus. Etiam consectetur 
+                    finibus ligula sit amet commodo. Praesent scelerisque. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Donec sed laoreet mi.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #000000;">
+            <div class="container d-flex justify-content-center align-items-center row" style="border-top: 2px solid;
+            border-image: linear-gradient(90deg, rgba(204, 153, 0, 0) 0%, #CC9900 24.51%, #CC9900 47.51%, #CC9900 74.51%, rgba(204, 153, 0, 0) 100%);
+            border-image-slice: 1;">
+                <p class="text-center text-white py-5 px-3 reveal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Donec sed laoreet mi. Integer dui ipsum, ornare nec pulvinar eu, ultricies sit amet ipsum. 
+                    Aenean quam ante, laoreet eget suscipit nec, egestas egestas lectus. Etiam consectetur 
+                    finibus ligula sit amet commodo. Praesent scelerisque. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Donec sed laoreet mi.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #000000;">
+            <div class="container d-flex justify-content-center align-items-center gradient-line-left" style="height: 20vh;">
+                
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalPicture" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true" data-backdrop="true" data-keyboard="true">
+            <div class="modal-dialog modal-dialog-centered d-flex flex-column justify-content-center align-items-center " role="document">
+                <div class="modal-header d-flex justify-content-end w-100 text-right" style="border: none;">                 
+                    <button class="bg-transparent" style="border: none;" data-bs-dismiss="modal"><i class="fa fa-times fs-3" aria-hidden="true" style="color: #FFFFFF;"></i></button>              
+                </div>
+                <div class="modal-content text-center align-items-center p-3" style="background: #000000;">
+                    <div style="border-radius: 20px; border: 2px solid #CC9900; padding: 10px;">
+                        <img id="highlightedImage" src="" alt="" class="img-fluid" style="border-radius: 10px; ">
+                    </div>                
+                    <p id="title" class="py-2 fs-4" style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%; margin: 10px; font-family: 'Roboto',sans-serif; color: #CC9900;"></p>
+                    <p id="description" class="text-white" style="font-family: 'Roboto',sans-serif;"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="background-color: #362406;">
+            <footer class="container"> 
+                <p class="text-center text-white pt-3">© All Rights Reserved 2024</p>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script/main.js"></script>
+        <script>
+            const swiper1 = new Swiper('.swiper1', {
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                loop: true,
+                effect: 'coverflow', 
+ 
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                coverflowEffect: {
+                    rotate: 50, // Rotate angle of the slide in degrees
+                    stretch: 0, // Stretch space between slides (in pixels)
+                    depth: 100, // Depth of the slide (in pixels)
+                    modifier: 1, // Modifier of the effect (scale factor)
+                    slideShadows: true // Enable slide shadows
+                },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    576: {
+                        slidesPerView: 2 
+                    },
+                    768: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+
+            const swiper2 = new Swiper('.swiper2', {
+                slidesPerView: 1,
+                loop: true,
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+            });
+        </script>
+    </body>
+</html>
